@@ -2,8 +2,8 @@
 Initial files for a new repository.
 
 This includes
-- README.rd
-- LICENSE.md
+- README.md
+- LICENSE
 - .gitignore
 - .github/CODE_OF_CONDUCT.md
 - .github/CONTRIBUTING.md
