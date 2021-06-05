@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+pipenv-setup = "*"
+pytest = "*"
+pip = "*"
+pydoctor = {extras = [ "rst",]}
+build = "*"
+twine = "*"
+mkdocs = "*"
+
+[requires]
+python_version = "3.9"
