@@ -1,6 +1,21 @@
-# ignore all files
+# Ignore Files
+# ============
 *~
 .*~
+# ghostwriter
+*.md.backup
+
+# Ignore Folders
+# ==============
+__pycache__/
+qtgrid.egg-info/
+build/
+dist/
+
+# KDevelop
+# ========
+.kdev*/
+qtgrid.kdev*
 
 ##########
 # Examples
