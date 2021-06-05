@@ -7,7 +7,7 @@
 [5]: https://pypi.org                                  "PyPi"
 [6]: FIXME                                             "API Documentation"
 
-**NOTE:** This repository and site is currently under construction
+**NOTE:** This repository is currently under construction. Do not clone.
 
 The python **qtgrid** package is for [PyQt][1], or [PySide][2] developers. It helps to build *QGridLayout's* dynamically and with visual help during implementation time. Note that **qtgrid** works in the same way for PyQt5, PyQt6, and PySide6.
 
