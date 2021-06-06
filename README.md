@@ -2,12 +2,12 @@
 
 [1]: https://www.riverbankcomputing.com/software/pyqt/ "PyQt"
 [2]: https://www.qt.io/qt-for-python                   "PySide6"
-[3]: REFERENCE.md                                      "Reference Manual"
-[4]: TUTORIAL.md                                       "qtgrid Tutorial"
+[3]: https://devlog42.github.io/qtgrid/reference/      "Reference Manual"
+[4]: https://devlog42.github.io/qtgrid/tutorial/       "qtgrid Tutorial"
 [5]: https://pypi.org                                  "PyPi"
-[6]: FIXME                                             "API Documentation"
-
-**NOTE:** This repository is currently under construction. Do not clone.
+[6]: https://devlog42.github.io/qtgrid/api/            "API Documentation"
+[7]: https://github.com/devlog42/qtgrid/blob/main/.github/CONTRIBUTING.md    "Contributing"
+[8]: https://github.com/devlog42/qtgrid/blob/main/.github/CODE_OF_CONDUCT.md "Code of Conduct"
 
 The python **qtgrid** package is for [PyQt][1], or [PySide][2] developers. It helps to build *QGridLayout's* dynamically and with visual help during implementation time. Note that **qtgrid** works in the same way for PyQt5, PyQt6, and PySide6.
 
@@ -113,6 +113,3 @@ Get the current project source from GitHub
 
 - git clone https://github.com/devlog42/qtgrid
 
-## Contribution
-
-## Code of Conduct
