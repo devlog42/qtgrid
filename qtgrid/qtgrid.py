@@ -253,7 +253,7 @@ class Grid(QObject):
             grid.set_label_source( name_id="foo", label=myLabel )
             grid.set_label_source("foo", myLabel)
 
-        The *name_id* is the key to access the label with the `add_label` method.
+        The *name_id* is the key to access the label with the `add_label`, or `get_label` methods.
 
         :param name_id: required str name for the label
         :param label:   required QLabel object to store
@@ -545,11 +545,13 @@ class Grid(QObject):
         Add a `_Cell` object with a *QLabel* object at `_WriteHead` position into the grid
 
         | The *name_id* argument references to a label preset.
+        | If *x_span* value is "all", the added label spans over the remaining row.
         | See also the `set_label_source` method.
 
         .. python::
             cell = grid.add_label( name_id="foo", text="lorem ipsum", y_span=2, x_span=2, to_list="list1" )
             cell = grid.add_label("foo", "lorem ipsum", y_span=2, x_span=2, to_list="list1")
+            cell = grid.add_label("foo", "lorem ipsum", x_span="all")
             cell = grid.add_label("foo", "lorem ipsum")
 
         There are predefined defaults:
@@ -557,6 +559,9 @@ class Grid(QObject):
         .. python::
             cell = grid.add_label("default", "lorem ipsum")
             cell = grid.add_label("default-header", "Some Header")
+
+        | For your disposla, you may also add the label to an internal list with the *to_list*
+        | argument, or use the `get_label` method.
 
         | In most cases the user don't need the returned `_Cell` object, since the added label
         | can also be added to an internal list with the *to_list* argument. But you may also
@@ -569,7 +574,7 @@ class Grid(QObject):
         :param name_id: required string
         :param text:    required string
         :param y_span:  int >= 1, default 1
-        :param x_span:  int >= 1, default 1
+        :param x_span:  int >= 1, or string "all", default 1
         :param to_list: optional str name of an internal list
 
         :return: `_Cell` object with *QLabel* object
