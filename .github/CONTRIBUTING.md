@@ -95,14 +95,13 @@ The corresponding sites of the homepage can be found in *docs-source/docs/* fold
 
 As long as you are working on it, you can start a small dev server :
 
-    $ cd docs-pages
+    $ cd docs-source
     $ mkdocs serve &
 
 When the work is done, call the following script to regenerate the pages in *docs/*.
 
-    $ cd docs-pages
+    $ cd docs-source
     $ bash mkpages.sh
-
 
 &nbsp;<br/>
 &nbsp;<br/>
