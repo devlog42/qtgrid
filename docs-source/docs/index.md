@@ -110,6 +110,16 @@ Get the current project source from GitHub
 
 When importing **qtgrid**, for an installation of PyQt6, PyQt5, or PySide6 is tested in that order. If none of these are found, a corresponding error message is issued.
 
+## Contribution
+
+Every contribution that advances this project is very welcome.
+
+If you want to report a bug or ask about a new feature, please visit the dedicated [issues][5] page. There you'll find suitable templates for your request, including one that is esspecially intended for mistakes in the documentations.
+
+However, if you want to get involved in development, please check out the [Contribution][7] page first.
+
+When you write posts, it goes without saying that you use a friendly language. Of course there is also a separate page on the topic called [Code of Conduct][8].
+
 ## License
 
 This package comes in terms of *GNU LGPLv3*.
