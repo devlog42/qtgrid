@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Make working with <em>QGridLayout</em> easier</p>
+<div class="rst-line-block">
+<div class="rst-line">The interface class for this module is <code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code>.</div>
+<div class="rst-line">In this moduele, there are a number of 3-tuples defining some colors.</div>
+</div>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#GREY">GREY</a></code></td>
+    <td><span>RGB-tuple for explicit empty cells</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#BLUE">BLUE</a></code></td>
+    <td><span>RGB-tuple for horizontal expander</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#CYAN">CYAN</a></code></td>
+    <td><span>RGB-tuple for vertical expander</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#YELLOW">YELLOW</a></code></td>
+    <td><span>RGB-tuple for horizontal fixed size gaps</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#ORANGE">ORANGE</a></code></td>
+    <td><span>RGB-tuple for vertical fixed size gaps</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#MAGENTA">MAGENTA</a></code></td>
+    <td><span>RGB-tuple for unused cells</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#HEADER_BG">HEADER_BG</a></code></td>
+    <td><span>RGB-tuple for headers default background color</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code></td>
+    <td><span>Interface class for this <em>qtgrid</em> module</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code></td>
+    <td><span>The <em>_WriteHead</em> keeps track of internal indices counting in 2 dimensions</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._ColumnGaps.html">_ColumnGaps</a></code></td>
+    <td><span>Serve <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code>'s for complete columns</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._Spans.html">_Spans</a></code></td>
+    <td><span>Serve a list of 2-tuples (coordinates) which are parts of a span</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._Cells.html">_Cells</a></code></td>
+    <td><span>Class <em>_Cells</em> aggregates <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects in a simple list</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code></td>
+    <td><span><em>_Cell</em> objects are aggregated to <code><a href="qtgrid.qtgrid._Cells.html#_list">_Cells._list</a></code>, which itself is composed to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code></span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code></td>
+    <td><span>A gap within the layout has a <strong>direction</strong> and a <strong>length</strong>. Objects are hold in <code><a href="qtgrid.qtgrid._Cell.html#item">_Cell.item</a></code> properties</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.GREY">
+    
+  </a>
+  <a name="GREY">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">GREY</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for explicit empty cells</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.BLUE">
+    
+  </a>
+  <a name="BLUE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BLUE</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for horizontal expander</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.CYAN">
+    
+  </a>
+  <a name="CYAN">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">CYAN</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for vertical expander</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.YELLOW">
+    
+  </a>
+  <a name="YELLOW">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">YELLOW</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for horizontal fixed size gaps</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.ORANGE">
+    
+  </a>
+  <a name="ORANGE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ORANGE</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for vertical fixed size gaps</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.MAGENTA">
+    
+  </a>
+  <a name="MAGENTA">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAGENTA</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for unused cells</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="qtgrid.qtgrid.HEADER_BG">
+    
+  </a>
+  <a name="HEADER_BG">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">HEADER_BG</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>RGB-tuple for headers default background color</div> (type: <code>tuple[int, ...]</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

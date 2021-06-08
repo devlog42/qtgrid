@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://devlog42.github.io/qtgrid/</loc>
+         <lastmod>2021-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://devlog42.github.io/qtgrid/reference/</loc>
+         <lastmod>2021-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://devlog42.github.io/qtgrid/tutorial/</loc>
+         <lastmod>2021-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>

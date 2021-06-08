@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid._ColumnGaps : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid._ColumnGaps.html">_ColumnGaps</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">_ColumnGaps</span>:</code></p>
+        <p><a href="classIndex.html#qtgrid.qtgrid._ColumnGaps">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Serve <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code>'s for complete columns</p>
+<ul class="rst-simple">
+<li>Composed to <code><a href="qtgrid.qtgrid.Grid.html#colgaps">Grid.colgaps</a></code> property.</li>
+<li>The column gaps are represented as a list of 2-tuples of the form: <em>(column_index, width)</em></li>
+</ul>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id6">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Example</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#grid">grid</a></code></td>
+    <td><span>Grid object</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#has_column">has_column</a></code></td>
+    <td><span>Does column gap exist at index <em>n</em> ?</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set">set</a></code></td>
+    <td><span>Set a list of <em>column_gaps</em> to private property <strong>_list_orig</strong></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get">get</a></code></td>
+    <td><span>Get accessor for <strong>_list</strong></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#measure">measure</a></code></td>
+    <td><span>Create property <strong>_list</strong>.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#count">count</a></code></td>
+    <td><span>Return the number of column gaps</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_to_cells">add_to_cells</a></code></td>
+    <td><span>Add <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects with <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> objects with corresponding coordinates to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code></span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_list_orig">_list_orig</a></code></td>
+    <td><span>Original list of tuples defining the column gaps, as set with <code><a href="#set">set</a></code> method</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_list">_list</a></code></td>
+    <td><span>Copy of the <strong>_list_orig</strong> variable with altered indices depending on <code><a href="qtgrid.qtgrid.Grid.html#expand_left">Grid.expand_left</a></code></span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, grid=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Example</p>
+<pre class="py-doctest">
+grid.colgaps = _ColumnGaps( grid )</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">grid</td><td>required Grid object</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.grid">
+    
+  </a>
+  <a name="grid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">grid</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Grid object</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps._list_orig">
+    
+  </a>
+  <a name="_list_orig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_list_orig</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Original list of tuples defining the column gaps, as set with <code><a href="#set">set</a></code> method</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps._list">
+    
+  </a>
+  <a name="_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_list</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Copy of the <strong>_list_orig</strong> variable with altered indices depending on <code><a href="qtgrid.qtgrid.Grid.html#expand_left">Grid.expand_left</a></code></p>
+<p>Its indices are altered depending on the expanding far left column.
+The values are calculated in <code><a href="#measure">measure</a></code>.</p>
+</div> (type: <code>list</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.has_column">
+    
+  </a>
+  <a name="has_column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">has_column</span>(self, n=-1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Does column gap exist at index <em>n</em> ?</p>
+<pre class="py-doctest">
+<span class="py-keyword">if</span> grid.colgaps.has_column( 2 ) : <span class="py-keyword">pass</span></pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">n</td><td>int, default -1</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">bool (type: <code>bool</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set</span>(self, column_gaps=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set a list of <em>column_gaps</em> to private property <strong>_list_orig</strong></p>
+<pre class="py-doctest">
+grid.colgaps.set([
+    (0, <span class="py-builtin">None</span>),    <span class="py-comment"># 1. column gap</span>
+    (1, 0),       <span class="py-comment"># 2.    "</span>
+    (2, 20),      <span class="py-comment"># 3.    "</span>
+    (3, <span class="py-string">"expand"</span>) <span class="py-comment"># 4.    "</span>
+])
+grid.colgaps.set()</pre><div class="rst-line-block">
+<div class="rst-line">Can only be used before any adds.</div>
+<div class="rst-line">Based on <strong>_list_orig</strong> the <strong>_list</strong> property is created in method <code><a href="#measure">measure</a></code>.</div>
+<div class="rst-line">If called without arguments, properties <strong>_list_orig</strong> and <strong>_list</strong> are reset.</div>
+<div class="rst-line">The 2-tuples in list <em>column_gaps</em> have the form: (<em>column_index, width)</em></div>
+</div>
+<ul class="rst-simple">
+<li><strong>column_index</strong> : int 0 &lt;= n &lt; max number of <code><a href="qtgrid.qtgrid.Grid.html#get_content_columns">Grid.get_content_columns</a></code></li>
+<li><strong>width</strong> : None, or int &gt;= 0, or string "expand"</li>
+</ul>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">column_gaps</td><td>list of tuples, default [ ]</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get accessor for <strong>_list</strong></p>
+<p>The <strong>_list</strong> is created in method <code><a href="#measure">measure</a></code>.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">list of tuples (type: <code>list</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.measure">
+    
+  </a>
+  <a name="measure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">measure</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Create property <strong>_list</strong>.</p>
+<div class="rst-line-block">
+<div class="rst-line">If <code><a href="qtgrid.qtgrid.Grid.html#expand_left">Grid.expand_left</a></code> is true, the <strong>_list_orig</strong> is copied to <strong>_list</strong>, but with incremented x-indices.</div>
+<div class="rst-line">If <code><a href="qtgrid.qtgrid.Grid.html#expand_left">Grid.expand_left</a></code> is false, the <strong>_list_orig</strong> is simply copied to <strong>_list</strong>.</div>
+</div>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.count">
+    
+  </a>
+  <a name="count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">count</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div>Return the number of column gaps<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">int length of property <strong>_list</strong> (type: <code>int</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._ColumnGaps.add_to_cells">
+    
+  </a>
+  <a name="add_to_cells">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_to_cells</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects with <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> objects with corresponding coordinates to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code></p>
+<div class="rst-line-block">
+<div class="rst-line">Walk through each tuple in <strong>_list</strong> property, create a <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> object with its coordinates,</div>
+<div class="rst-line">and put it into a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object and aggregate it to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code>.</div>
+</div>
+</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

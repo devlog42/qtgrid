@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid._Gap : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">_Gap</span>:</code></p>
+        <p><a href="classIndex.html#qtgrid.qtgrid._Gap">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>A gap within the layout has a <strong>direction</strong> and a <strong>length</strong>. Objects are hold in <code><a href="qtgrid.qtgrid._Cell.html#item">_Cell.item</a></code> properties</p>
+<ul class="rst-simple">
+<li>Coordinates of a <em>_Gap</em> are not saved in this class, but in
+class <em>_Cell</em> as <code><a href="qtgrid.qtgrid._Cell.html#y">_Cell.y</a></code> and <code><a href="qtgrid.qtgrid._Cell.html#x">_Cell.x</a></code> properties.</li>
+<li>It may display a column index number with a label.</li>
+</ul>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Examples</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#grid">grid</a></code></td>
+    <td><span>Grid object</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#is_expander">is_expander</a></code></td>
+    <td><span>Do this <em>gap</em> expand ?</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#is_empty">is_empty</a></code></td>
+    <td><span>Is this <em>gap</em> explicitly empty (gap.item == None) ?</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#item">item</a></code></td>
+    <td><span>Object as returned from <code><a href="#_gap_item">_gap_item</a></code> method : <em>None</em>, <em>QLabel</em> or <em>QSpacerItem</em></span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#label">label</a></code></td>
+    <td><span>If instance argument <strong>index</strong> is given, display a label with its number</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#direction">direction</a></code></td>
+    <td><span>Expanding or size direction 'H', 'V', 'vertical', or 'horizontal'</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#length">length</a></code></td>
+    <td><span>Length or size of this <em>gap</em>. Can be None, "expand", or int</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#index">index</a></code></td>
+    <td><span>If integer is given, it will be displayed as a label</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_gap_item">_gap_item</a></code></td>
+    <td><span>Create an object at init time representing this gap: <em>None</em>, <em>QLabel</em> or <em>QSpacerItem</em></span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Gap.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, grid=None, direction=None, length=None, index=-1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Examples</p>
+<pre class="py-doctest">
+cell = _Cell( _Gap(...), y=0, x=1, y_span=2, x_span=2 )
+
+<span class="py-comment"># horizontal direction</span>
+_Gap(grid)                                 <span class="py-comment"># H, explicit empty</span>
+_Gap(grid, direction=<span class="py-string">"H"</span>, length=<span class="py-builtin">None</span>)     <span class="py-comment"># H, explicit empty</span>
+_Gap(grid, direction=<span class="py-string">"H"</span>, length=0)        <span class="py-comment"># H, explicit empty</span>
+_Gap(grid, direction=<span class="py-string">"H"</span>, length=20)       <span class="py-comment"># H, sized (yellow)</span>
+_Gap(grid, direction=<span class="py-string">"H"</span>, length=<span class="py-string">"expand"</span>) <span class="py-comment"># H, expand (blue)</span>
+_Gap(grid, direction=<span class="py-string">"H"</span>, length=<span class="py-string">"unused"</span>) <span class="py-comment"># H, unused (magenta)</span>
+
+<span class="py-comment"># horizontal direction is default</span>
+_Gap(grid, length=<span class="py-builtin">None</span>)     <span class="py-comment"># H, explicit empty</span>
+_Gap(grid, length=0)        <span class="py-comment"># H, explicit empty</span>
+_Gap(grid, length=20)       <span class="py-comment"># H, sized (yellow)</span>
+_Gap(grid, length=<span class="py-string">"expand"</span>) <span class="py-comment"># H, expand (blue)</span>
+_Gap(grid, length=<span class="py-string">"unused"</span>) <span class="py-comment"># H, unused (magenta)</span>
+
+<span class="py-comment"># vertical direction</span>
+_Gap(grid, direction=<span class="py-string">"V"</span>, length=<span class="py-builtin">None</span>)     <span class="py-comment"># V, explicit empty</span>
+_Gap(grid, direction=<span class="py-string">"V"</span>, length=0)        <span class="py-comment"># V, explicit empty</span>
+_Gap(grid, direction=<span class="py-string">"V"</span>, length=20)       <span class="py-comment"># V, sized (yellow)</span>
+_Gap(grid, direction=<span class="py-string">"V"</span>, length=<span class="py-string">"expand"</span>) <span class="py-comment"># V, expand (blue)</span>
+_Gap(grid, direction=<span class="py-string">"V"</span>, length=<span class="py-string">"unused"</span>) <span class="py-comment"># V, unused (magenta)</span>
+
+<span class="py-comment"># If given, the index argument is displayed</span>
+_Gap(grid, length=20, index=0)
+_Gap(grid, index=20)</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">grid</td><td>Grid (type: object)</td></tr><tr><td></td><td class="fieldArg">direction</td><td>"H", "V", "horizontal", "vertical" (type: None or str)</td></tr><tr><td></td><td class="fieldArg">length</td><td><ul class="rst-simple">
+<li>If length == "expand", then add expander.</li>
+<li>If length == None or 0, then leave the cell empty (also add coordinates to <code><a href="qtgrid.qtgrid._Spans.html">_Spans</a></code>).</li>
+<li>If length &gt;= 1, then add fixed size spacer.</li>
+</ul>
+ (type: None, int, or str)</td></tr><tr><td></td><td class="fieldArg">index</td><td>If given, it will be displayed as a label (type: int)</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.grid">
+    
+  </a>
+  <a name="grid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">grid</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Grid object</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.is_expander">
+    
+  </a>
+  <a name="is_expander">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">is_expander</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Do this <em>gap</em> expand ?</p>
+<pre class="py-doctest">
+<span class="py-keyword">if</span> self.is_expander : <span class="py-keyword">pass</span></pre></div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.is_empty">
+    
+  </a>
+  <a name="is_empty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">is_empty</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Is this <em>gap</em> explicitly empty (gap.item == None) ?</p>
+<pre class="py-doctest">
+<span class="py-keyword">if</span> self.is_empty : <span class="py-keyword">pass</span></pre></div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.item">
+    
+  </a>
+  <a name="item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">item</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Object as returned from <code><a href="#_gap_item">_gap_item</a></code> method : <em>None</em>, <em>QLabel</em> or <em>QSpacerItem</em></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.label">
+    
+  </a>
+  <a name="label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">label</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>If instance argument <strong>index</strong> is given, display a label with its number</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.direction">
+    
+  </a>
+  <a name="direction">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">direction</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Expanding or size direction 'H', 'V', 'vertical', or 'horizontal'</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.length">
+    
+  </a>
+  <a name="length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">length</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Length or size of this <em>gap</em>. Can be None, "expand", or int</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Gap.index">
+    
+  </a>
+  <a name="index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">index</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>If integer is given, it will be displayed as a label</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="qtgrid.qtgrid._Gap._gap_item">
+    
+  </a>
+  <a name="_gap_item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_gap_item</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Create an object at init time representing this gap: <em>None</em>, <em>QLabel</em> or <em>QSpacerItem</em></p>
+<pre class="py-doctest">
+self.item = self._gap_item()</pre><div class="rst-line-block">
+<div class="rst-line">Visualize expander or gaps with a colored QLabel or a QSpacerItem</div>
+<div class="rst-line">with the corresponding expansion, behaviour, or size.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">None, QLabel, QSpacerItem (type: <code>QObject</code>)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid.Grid : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">Grid</span>(<span title="PySide6.QtCore.QObject">QObject</span>):</code></p>
+        <p><a href="classIndex.html#qtgrid.qtgrid.Grid">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div>Interface class for this <em>qtgrid</em> module</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Examples</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#layout">layout</a></code></td>
+    <td><span>Composed QGridLayout object. Will be cleared</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#wh">wh</a></code></td>
+    <td><span>Composed <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> object</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#colgaps">colgaps</a></code></td>
+    <td><span>Composed <code><a href="qtgrid.qtgrid._ColumnGaps.html">_ColumnGaps</a></code> object</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#spans">spans</a></code></td>
+    <td><span>Composed <code><a href="qtgrid.qtgrid._Spans.html">_Spans</a></code> object</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#cells">cells</a></code></td>
+    <td><span>Composed <code><a href="qtgrid.qtgrid._Cells.html">_Cells</a></code> object</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#expand_left">expand_left</a></code></td>
+    <td><span>Boolean. If True, a far left column with expanders are applied</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#expand_right">expand_right</a></code></td>
+    <td><span>Boolean. If True, a far right column with expanders are applied</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#content_columns">content_columns</a></code></td>
+    <td><span>Integer &gt;= 1. Max number of content columns</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#work_up">work_up</a></code></td>
+    <td><span>Boolean. If True, visual help is applied</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#label_sources">label_sources</a></code></td>
+    <td><span>Dictionary = { "name_id1": qlabel1, "name_id2": qlabel2, ... }</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#custom_lists">custom_lists</a></code></td>
+    <td><span>Dictionary = { "list_name1": [ ], "list_name2": [ ], ... }</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_list_names">set_list_names</a></code></td>
+    <td><span>Prepare internal lists with given names</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_expand_left">set_expand_left</a></code></td>
+    <td><span>Set whether or not to add a far left expanding column, influencing the grid alignment</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_expand_right">set_expand_right</a></code></td>
+    <td><span>Set whether or not to add a far right expanding column, influencing the grid alignment</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_content_columns">set_content_columns</a></code></td>
+    <td><span>Set maximum number of content columns</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_column_gaps">set_column_gaps</a></code></td>
+    <td><span>Interface method to <code><a href="qtgrid.qtgrid._ColumnGaps.html#set">_ColumnGaps.set</a></code></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_work_up">set_work_up</a></code></td>
+    <td><span>Set whether or not to activate the work-up mode</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_label_source">set_label_source</a></code></td>
+    <td><span>Store a given QLabel object as a copy source</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_list">get_list</a></code></td>
+    <td><span>Get <em>name</em> list of widgets as it was prepared with <code><a href="#set_list_names">set_list_names</a></code></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_list_names">get_list_names</a></code></td>
+    <td><span>Get all custom list names as they were prepared with <code><a href="#set_list_names">set_list_names</a></code></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_content_columns">get_content_columns</a></code></td>
+    <td><span>Get max number of content columns</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_label">get_label</a></code></td>
+    <td><span>Get stored QLabel object by <em>name_id</em></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add">add</a></code></td>
+    <td><span>Add a <em>widget</em> to the current <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_gap">add_gap</a></code></td>
+    <td><span>Add a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with a <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> object to the <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_empty_row">add_empty_row</a></code></td>
+    <td><span>Add a row gap</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add_label">add_label</a></code></td>
+    <td><span>Add a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with a <em>QLabel</em> object at <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear">clear</a></code></td>
+    <td><span>Delete all <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects and corresponding items in <em>QGridLayout</em> recursively</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#finish">finish</a></code></td>
+    <td><span>Always call this after you added all your cells</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_default_label_sources">_set_default_label_sources</a></code></td>
+    <td><span>Set label sources for "default" and "default-header"</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_get_remaining_x_span">_get_remaining_x_span</a></code></td>
+    <td><span>Get the number of remaining cells in row</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_copy_label">_copy_label</a></code></td>
+    <td><span>Get a copy of a given <em>label</em></span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, layout=None, content_columns=1, expand_left=False, expand_right=False, work_up=False, column_gaps=[], list_names=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Examples</p>
+<pre class="py-doctest">
+grid = Grid()
+
+grid = Grid(
+    layout          = QGridLayout(),
+    content_columns = 5,
+    expand_left     = <span class="py-builtin">False</span>,
+    expand_right    = <span class="py-builtin">True</span>,
+    work_up         = <span class="py-builtin">True</span>,
+
+    column_gaps = [ (1, 20), (3, <span class="py-builtin">None</span>) ],
+
+    list_names = [<span class="py-string">"list1"</span>, <span class="py-string">"list2"</span>],
+)</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">layout</td><td>None (default) or QGridLayout object</td></tr><tr><td></td><td class="fieldArg">content_columns</td><td>Max int number of content columns, default 1</td></tr><tr><td></td><td class="fieldArg">expand_left</td><td>boolean, default False</td></tr><tr><td></td><td class="fieldArg">expand_right</td><td>boolean, default False</td></tr><tr><td></td><td class="fieldArg">work_up</td><td>boolean, default False</td></tr><tr><td></td><td class="fieldArg">column_gaps</td><td>list of tuples, default [ ]</td></tr><tr><td></td><td class="fieldArg">list_names</td><td>list of string names pointing to lists, default [ ]</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.layout">
+    
+  </a>
+  <a name="layout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">layout</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Composed QGridLayout object. Will be cleared</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.wh">
+    
+  </a>
+  <a name="wh">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">wh</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Composed <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> object</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.colgaps">
+    
+  </a>
+  <a name="colgaps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">colgaps</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Composed <code><a href="qtgrid.qtgrid._ColumnGaps.html">_ColumnGaps</a></code> object</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.spans">
+    
+  </a>
+  <a name="spans">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">spans</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Composed <code><a href="qtgrid.qtgrid._Spans.html">_Spans</a></code> object</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.cells">
+    
+  </a>
+  <a name="cells">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cells</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Composed <code><a href="qtgrid.qtgrid._Cells.html">_Cells</a></code> object</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.expand_left">
+    
+  </a>
+  <a name="expand_left">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">expand_left</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Boolean. If True, a far left column with expanders are applied</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.expand_right">
+    
+  </a>
+  <a name="expand_right">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">expand_right</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Boolean. If True, a far right column with expanders are applied</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.content_columns">
+    
+  </a>
+  <a name="content_columns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">content_columns</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Integer &gt;= 1. Max number of content columns</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.work_up">
+    
+  </a>
+  <a name="work_up">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">work_up</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Boolean. If True, visual help is applied</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.label_sources">
+    
+  </a>
+  <a name="label_sources">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">label_sources</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Dictionary = { "name_id1": qlabel1, "name_id2": qlabel2, ... }</div> (type: <code>dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid.Grid.custom_lists">
+    
+  </a>
+  <a name="custom_lists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">custom_lists</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Dictionary = { "list_name1": [ ], "list_name2": [ ], ... }</div> (type: <code>dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_list_names">
+    
+  </a>
+  <a name="set_list_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_list_names</span>(self, names=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Prepare internal lists with given names</p>
+<pre class="py-doctest">
+grid.set_list_names(<span class="py-string">"list1"</span>, <span class="py-string">"list2"</span>)
+grid.set_list_names()</pre><div class="rst-line-block">
+<div class="rst-line">Can only be used before any widget is added or after calling the <code><a href="#clear">clear</a></code> method.</div>
+<div class="rst-line">The internal lists are intended to hold users widgets for later disposal.</div>
+<div class="rst-line">Add widgets to the lists with <code><a href="#add">add</a></code>, or <code><a href="#add_label">add_label</a></code> methods.</div>
+<div class="rst-line">After all, use the <code><a href="#get_list_names">get_list_names</a></code>, or <code><a href="#get_list">get_list</a></code> methods to access the lists in turn.</div>
+<div class="rst-line">If called without argument, all internal lists will be removed.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">names</td><td>list of strings, default [ ]</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_expand_left">
+    
+  </a>
+  <a name="set_expand_left">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_expand_left</span>(self, flag=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set whether or not to add a far left expanding column, influencing the grid alignment</p>
+<p>Can only be used before any widget is added or after calling the <code><a href="#clear">clear</a></code> method.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">flag</td><td>boolean, default False</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_expand_right">
+    
+  </a>
+  <a name="set_expand_right">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_expand_right</span>(self, flag=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set whether or not to add a far right expanding column, influencing the grid alignment</p>
+<p>Can only be used before any widget is added or after calling the <code><a href="#clear">clear</a></code> method.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">flag</td><td>boolean, default False</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_content_columns">
+    
+  </a>
+  <a name="set_content_columns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_content_columns</span>(self, content_columns=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set maximum number of content columns</p>
+<pre class="py-doctest">
+grid.set_content_columns( content_columns=1 )
+grid.set_content_columns( 1 )</pre><div class="rst-line-block">
+<div class="rst-line">Can only be used before any widget is added or after calling the <code><a href="#clear">clear</a></code> method.</div>
+<div class="rst-line">The possibly far left or right expanding columns are not considered.</div>
+<div class="rst-line">See also the <code><a href="#set_column_gaps">set_column_gaps</a></code> method.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">content_columns</td><td>int n with n &gt;= 1 and n &gt; number of <code><a href="qtgrid.qtgrid._ColumnGaps.html#count">_ColumnGaps.count</a></code>, default 1</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_column_gaps">
+    
+  </a>
+  <a name="set_column_gaps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_column_gaps</span>(self, column_gaps=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div>Interface method to <code><a href="qtgrid.qtgrid._ColumnGaps.html#set">_ColumnGaps.set</a></code></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_work_up">
+    
+  </a>
+  <a name="set_work_up">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_work_up</span>(self, flag=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set whether or not to activate the work-up mode</p>
+<p>Can only be used before any widget is added or after calling the <code><a href="#clear">clear</a></code> method.</p>
+<p>In work up mode otherwise invisible cells are colored indicating the following meaning:</p>
+<ul class="rst-simple">
+<li><strong>Magenta</strong> : unused cell</li>
+<li><strong>Blue</strong>    : horizontal expander</li>
+<li><strong>Cyan</strong>    : vertical expander</li>
+<li><strong>Yellow</strong>  : fixed sized horizontal gap</li>
+<li><strong>Orange</strong>  : fixed sized vertical gap</li>
+<li><strong>Grey</strong>    : explicit empty cell</li>
+</ul>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">flag</td><td>boolean, default False</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.set_label_source">
+    
+  </a>
+  <a name="set_label_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_label_source</span>(self, name_id=None, label=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Store a given QLabel object as a copy source</p>
+<pre class="py-doctest">
+grid.set_label_source( name_id=<span class="py-string">"foo"</span>, label=myLabel )
+grid.set_label_source(<span class="py-string">"foo"</span>, myLabel)</pre><p>The <em>name_id</em> is the key to access the label with the <code><a href="#add_label">add_label</a></code>, or <code><a href="#get_label">get_label</a></code> methods.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">name_id</td><td>required str name for the label</td></tr><tr><td></td><td class="fieldArg">label</td><td>required QLabel object to store</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.get_list">
+    
+  </a>
+  <a name="get_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_list</span>(self, name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get <em>name</em> list of widgets as it was prepared with <code><a href="#set_list_names">set_list_names</a></code></p>
+<p>The returned list contains QWidgets object added with the <code><a href="#add">add</a></code> or <code><a href="#add_label">add_label</a></code> methods.</p>
+<pre class="py-doctest">
+<span class="py-keyword">for</span> widget <span class="py-keyword">in</span> grid.get_list(<span class="py-string">"list1"</span>):
+    <span class="py-keyword">pass</span></pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">name</td><td>required str name of an internal list</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">list of widgets (type: <code>list</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.get_list_names">
+    
+  </a>
+  <a name="get_list_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_list_names</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get all custom list names as they were prepared with <code><a href="#set_list_names">set_list_names</a></code></p>
+<pre class="py-doctest">
+names = grid.get_list_names()
+<span class="py-keyword">for</span> name <span class="py-keyword">in</span> names:
+    <span class="py-keyword">for</span> widget <span class="py-keyword">in</span> grid.get_list( name ):
+        <span class="py-keyword">pass</span></pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">list of list names (type: <code>list</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.get_content_columns">
+    
+  </a>
+  <a name="get_content_columns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_content_columns</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div>Get max number of content columns<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">int (type: <code>int</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.get_label">
+    
+  </a>
+  <a name="get_label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_label</span>(self, name_id=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get stored QLabel object by <em>name_id</em></p>
+<p>Labels are stored with <code><a href="#set_label_source">set_label_source</a></code>.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">name_id</td><td>required str id for a stored label</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">QLabel object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add</span>(self, widget=None, y_span=1, x_span=1, to_list=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add a <em>widget</em> to the current <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</p>
+<pre class="py-doctest">
+cell = grid.add( widget=WIDGET, y_span=1, x_span=1, to_list=<span class="py-string">"list_name"</span> )
+cell = grid.add( WIDGET, y_span=2, x_span=2 )
+cell = grid.add( WIDGET, x_span=<span class="py-string">"all"</span> )
+cell = grid.add( WIDGET )</pre><div class="rst-line-block">
+<div class="rst-line">The <em>to_list</em> argument can be used to not only add the widget to the grid, but also to</div>
+<div class="rst-line">a prepared internal list for later use. See also the <code><a href="#set_list_names">set_list_names</a></code> method.</div>
+<div class="rst-line"><br /></div>
+<div class="rst-line">The <em>y_span</em> and <em>x_span</em> integer arguments spans the cell over the given number of rows</div>
+<div class="rst-line">and columns. If <em>x_span</em> value is <strong>"all"</strong> the cell spans over the remaining row.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">widget</td><td>required QWidget object to be added</td></tr><tr><td></td><td class="fieldArg">y_span</td><td>int &gt;= 1, default 1</td></tr><tr><td></td><td class="fieldArg">x_span</td><td>int &gt;= 1, or string "all", default 1</td></tr><tr><td></td><td class="fieldArg">to_list</td><td>optional str name of an internal list</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with <em>QWidget</em> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.add_gap">
+    
+  </a>
+  <a name="add_gap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_gap</span>(self, direction=None, length=None, y_span=1, x_span=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with a <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> object to the <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</p>
+<pre class="py-doctest">
+cell = add_gap(direction=<span class="py-string">"H"</span>, length=<span class="py-string">"20"</span>, y_span=2, x_span=2)
+<span class="py-comment"># horizontal direction</span>
+cell = add_gap(<span class="py-string">"H"</span>)           <span class="py-comment"># same as None</span>
+cell = add_gap(<span class="py-string">"H"</span>, 0)        <span class="py-comment"># same as None</span>
+cell = add_gap(<span class="py-string">"H"</span>, <span class="py-builtin">None</span>)     <span class="py-comment"># explicitly empty</span>
+cell = add_gap(<span class="py-string">"H"</span>, 20)
+cell = add_gap(<span class="py-string">"H"</span>, <span class="py-string">"expand"</span>)
+
+<span class="py-comment"># horizontal direction is default</span>
+cell = add_gap()         <span class="py-comment"># same as None</span>
+cell = add_gap(0)        <span class="py-comment"># same as None</span>
+cell = add_gap(<span class="py-builtin">None</span>)     <span class="py-comment"># explicitly empty</span>
+cell = add_gap(20)
+cell = add_gap(<span class="py-string">"expand"</span>)
+
+<span class="py-comment"># vertical direction</span>
+cell = add_gap(<span class="py-string">"V"</span>)           <span class="py-comment"># same as None</span>
+cell = add_gap(<span class="py-string">"V"</span>, 0)        <span class="py-comment"># same as None</span>
+cell = add_gap(<span class="py-string">"V"</span>, <span class="py-builtin">None</span>)     <span class="py-comment"># explicitly empty</span>
+cell = add_gap(<span class="py-string">"V"</span>, 20)
+cell = add_gap(<span class="py-string">"V"</span>, <span class="py-string">"expand"</span>)</pre><p>See the <code><a href="#set_work_up">set_work_up</a></code> method for a list of displayed colors in <strong>work_up</strong> mode.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">direction</td><td>None, "H" (default) , "V", "horizontal", or "vertical"</td></tr><tr><td></td><td class="fieldArg">length</td><td>None, int &gt;= 0, or "expand", default None</td></tr><tr><td></td><td class="fieldArg">y_span</td><td>int &gt;= 1, default 1</td></tr><tr><td></td><td class="fieldArg">x_span</td><td>int &gt;= 1, default 1</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with a <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.add_empty_row">
+    
+  </a>
+  <a name="add_empty_row">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_empty_row</span>(self, height=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add a row gap</p>
+<pre class="py-doctest">
+cell = grid.add_empty_row()     <span class="py-comment"># same as None</span>
+cell = grid.add_empty_row(0)    <span class="py-comment"># same as None</span>
+cell = grid.add_empty_row(<span class="py-builtin">None</span>) <span class="py-comment"># explicitly empty</span>
+cell = grid.add_empty_row(20)
+cell = grid.add_empty_row(<span class="py-string">"expand"</span>)</pre><div class="rst-line-block">
+<div class="rst-line">If not in first column: fill the remaining row with explicit empty cells (colored grey), then …</div>
+<div class="rst-line">In the first column of a row: apply vertical gap by adding a single cell spawning the complete row.</div>
+<div class="rst-line"><br /></div>
+<div class="rst-line">The first three calls are all equivalent.</div>
+<div class="rst-line">When given a integer number, the row gets a fixed height in pixels.</div>
+<div class="rst-line">If the string “expand” is used, the row expands in vertical direction.</div>
+<div class="rst-line">See the <code><a href="#set_work_up">set_work_up</a></code> method for a list of displayed colors in <strong>work_up</strong> mode.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">height</td><td>None (default), int &gt;= 0, or "expand"</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.add_label">
+    
+  </a>
+  <a name="add_label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_label</span>(self, name_id=None, text='', y_span=1, x_span=1, to_list=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with a <em>QLabel</em> object at <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> position into the grid</p>
+<div class="rst-line-block">
+<div class="rst-line">The <em>name_id</em> argument references to a label preset.</div>
+<div class="rst-line">If <em>x_span</em> value is "all", the added label spans over the remaining row.</div>
+<div class="rst-line">See also the <code><a href="#set_label_source">set_label_source</a></code> method.</div>
+</div>
+<pre class="py-doctest">
+cell = grid.add_label( name_id=<span class="py-string">"foo"</span>, text=<span class="py-string">"lorem ipsum"</span>, y_span=2, x_span=2, to_list=<span class="py-string">"list1"</span> )
+cell = grid.add_label(<span class="py-string">"foo"</span>, <span class="py-string">"lorem ipsum"</span>, y_span=2, x_span=2, to_list=<span class="py-string">"list1"</span>)
+cell = grid.add_label(<span class="py-string">"foo"</span>, <span class="py-string">"lorem ipsum"</span>, x_span=<span class="py-string">"all"</span>)
+cell = grid.add_label(<span class="py-string">"foo"</span>, <span class="py-string">"lorem ipsum"</span>)</pre><p>There are predefined defaults:</p>
+<pre class="py-doctest">
+cell = grid.add_label(<span class="py-string">"default"</span>, <span class="py-string">"lorem ipsum"</span>)
+cell = grid.add_label(<span class="py-string">"default-header"</span>, <span class="py-string">"Some Header"</span>)</pre><div class="rst-line-block">
+<div class="rst-line">For your disposla, you may also add the label to an internal list with the <em>to_list</em></div>
+<div class="rst-line">argument, or use the <code><a href="#get_label">get_label</a></code> method.</div>
+</div>
+<div class="rst-line-block">
+<div class="rst-line">In most cases the user don't need the returned <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object, since the added label</div>
+<div class="rst-line">can also be added to an internal list with the <em>to_list</em> argument. But you may also</div>
+<div class="rst-line">access the new label directly:</div>
+</div>
+<pre class="py-doctest">
+cell  = grid.add_label(<span class="py-string">"default"</span>, <span class="py-string">"lorem ipsum"</span>)
+label = cell.item</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">name_id</td><td>required string</td></tr><tr><td></td><td class="fieldArg">text</td><td>required string</td></tr><tr><td></td><td class="fieldArg">y_span</td><td>int &gt;= 1, default 1</td></tr><tr><td></td><td class="fieldArg">x_span</td><td>int &gt;= 1, or string "all", default 1</td></tr><tr><td></td><td class="fieldArg">to_list</td><td>optional str name of an internal list</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object with <em>QLabel</em> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span>(self, _layout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Delete all <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects and corresponding items in <em>QGridLayout</em> recursively</p>
+<pre class="py-doctest">
+grid.clear()</pre><div class="rst-line-block">
+<div class="rst-line">The <em>_layout</em> argument is used for the recursive call only.</div>
+<div class="rst-line">The <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> coordinates are reset.</div>
+<div class="rst-line">All <code><a href="#custom_lists">custom_lists</a></code> and the private list <code><a href="qtgrid.qtgrid._Spans.html#_list">_Spans._list</a></code> are reset.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">_layout</td><td>None or QGridLayout object</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid.Grid.finish">
+    
+  </a>
+  <a name="finish">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">finish</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Always call this after you added all your cells</p>
+<div class="rst-line-block">
+<div class="rst-line">Apply from all <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects their holding <em>QWidget</em> objects to the resulting <em>QGridLayout</em>.</div>
+<div class="rst-line">Also add the expander and gaps and mark unused cells in <strong>work_up</strong> mode.</div>
+</div>
+</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="qtgrid.qtgrid.Grid._set_default_label_sources">
+    
+  </a>
+  <a name="_set_default_label_sources">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_default_label_sources</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Set label sources for "default" and "default-header"</p>
+<p>After calling this method at init time the user can do :</p>
+<pre class="py-doctest">
+grid.add_label(<span class="py-string">"default"</span>, <span class="py-string">"my text"</span>)
+grid.add_label(<span class="py-string">"default-header"</span>, <span class="py-string">"Some Header"</span>)</pre></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="qtgrid.qtgrid.Grid._get_remaining_x_span">
+    
+  </a>
+  <a name="_get_remaining_x_span">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_get_remaining_x_span</span>(self, from_x=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the number of remaining cells in row</p>
+<div class="rst-line-block">
+<div class="rst-line">If <em>from_x</em> is None, the current <strong>x</strong> value from <code><a href="qtgrid.qtgrid._WriteHead.html">_WriteHead</a></code> is taken.</div>
+<div class="rst-line">The return value is the range <em>from_x</em> to the end of all content columns.</div>
+<div class="rst-line">It is appropiate for layout <em>span</em> values counting from 1.</div>
+</div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">from_x</td><td>None (default), or int &gt;= 0</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">int &gt;= 0 (type: <code>int</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="qtgrid.qtgrid.Grid._copy_label">
+    
+  </a>
+  <a name="_copy_label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_copy_label</span>(self, label):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get a copy of a given <em>label</em></p>
+<pre class="py-doctest">
+label2 = grid._copy_label( label1 )</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">label</td><td>required QLabel object</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">QLabel object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

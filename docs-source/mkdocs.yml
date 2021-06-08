@@ -1,0 +1,9 @@
+site_url: https://devlog42.github.io/qtgrid
+site_name: qtgrid
+nav:
+  - Home: index.md
+  - Tutorial: tutorial.md
+  - Reference Manual: reference.md
+  - API Documentation: https://devlog42.github.io/qtgrid/api/
+  - Repository: https://github.com/devlog42/qtgrid
+theme: readthedocs

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid._Cells : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid._Cells.html">_Cells</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">_Cells</span>:</code></p>
+        <p><a href="classIndex.html#qtgrid.qtgrid._Cells">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Class <em>_Cells</em> aggregates <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects in a simple list</p>
+<div class="rst-line-block">
+<div class="rst-line">Composed to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code> property.</div>
+<div class="rst-line">It serves methods for handling aggregated <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects and to apply them</div>
+<div class="rst-line">to the resulting layout. Note that coordinates are saved within <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects.</div>
+</div>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id8">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Example</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#grid">grid</a></code></td>
+    <td><span>Grid object</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get">get</a></code></td>
+    <td><span>Get accessor for <strong>_list</strong> of <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add">add</a></code></td>
+    <td><span>Add (or aggregate) a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object to the <strong>_list</strong></span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_cell">get_cell</a></code></td>
+    <td><span>Return the <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object from coordinate (y,x)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_last">get_last</a></code></td>
+    <td><span>Return the last inserted <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#has_taken">has_taken</a></code></td>
+    <td><span>Check if a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object exists at coordinate (y, x)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_current_max_y">get_current_max_y</a></code></td>
+    <td><span>Get the maximum y-coordinate value out of all aggregated <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#apply_to_layout">apply_to_layout</a></code></td>
+    <td><span>Add all <code><a href="qtgrid.qtgrid._Cell.html#item">_Cell.item</a></code> objects to the resulting QGridLayout</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_list">_list</a></code></td>
+    <td><span>Aggregated list of <em>_Cell</em> objects</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, grid=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Example</p>
+<pre class="py-doctest">
+grid.cells = _Cells()</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">grid</td><td>required Grid object</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cells.grid">
+    
+  </a>
+  <a name="grid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">grid</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Grid object</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="qtgrid.qtgrid._Cells._list">
+    
+  </a>
+  <a name="_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_list</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>Aggregated list of <em>_Cell</em> objects</div> (type: <code>list</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get accessor for <strong>_list</strong> of <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects</p>
+<pre class="py-doctest">
+<span class="py-keyword">for</span> cell <span class="py-keyword">in</span> grid.cells.get():
+    <span class="py-builtin">print</span>(<span class="py-string">"y,x :"</span>, cell.y, cell.x)</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">self._list (type: <code>list</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add</span>(self, cell=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add (or aggregate) a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object to the <strong>_list</strong></p>
+<pre class="py-doctest">
+grid.cells.add( _Cell(...) )</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">cell</td><td>required <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.get_cell">
+    
+  </a>
+  <a name="get_cell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_cell</span>(self, y=-1, x=-1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Return the <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object from coordinate (y,x)</p>
+<pre class="py-doctest">
+cell = grid.cells.get_cell( 0,1 )
+<span class="py-builtin">print</span>(<span class="py-string">"y,x :"</span>, cell.y, cell.x)</pre><p>Raise exception if not found.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">y</td><td>int &gt;= 0</td></tr><tr><td></td><td class="fieldArg">x</td><td>int &gt;= 0</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.get_last">
+    
+  </a>
+  <a name="get_last">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_last</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Return the last inserted <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object</p>
+<pre class="py-doctest">
+cell = grid.cells.get_last()</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2"><code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object (type: <code>object</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.has_taken">
+    
+  </a>
+  <a name="has_taken">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">has_taken</span>(self, y=-1, x=-1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Check if a <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> object exists at coordinate (y, x)</p>
+<pre class="py-doctest">
+<span class="py-keyword">if</span> grid.cells.has_taken( 0,1 ) : <span class="py-keyword">pass</span></pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">y</td><td>int</td></tr><tr><td></td><td class="fieldArg">x</td><td>int</td></tr><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">bool (type: <code>bool</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.get_current_max_y">
+    
+  </a>
+  <a name="get_current_max_y">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_current_max_y</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Get the maximum y-coordinate value out of all aggregated <code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code> objects</p>
+<pre class="py-doctest">
+max_y = grid.cells.get_current_max_y()</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Returns</td><td colspan="2">int max y (type: <code>int</code>)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cells.apply_to_layout">
+    
+  </a>
+  <a name="apply_to_layout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">apply_to_layout</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Add all <code><a href="qtgrid.qtgrid._Cell.html#item">_Cell.item</a></code> objects to the resulting QGridLayout</p>
+<pre class="py-doctest">
+grid.cells.apply_to_layout()</pre></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -4,12 +4,14 @@
 .*~
 Pipfile
 Pipfile.lock
+pyproject.toml
 # ghostwriter
 *.md.backup
 
 # Ignore Folders
 # ==============
 __pycache__/
+.pytest_cache/
 qtgrid.egg-info/
 build/
 dist/

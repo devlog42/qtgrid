@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://devlog42.github.io/qtgrid/tutorial/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Tutorial - qtgrid</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tutorial";
+    var mkdocs_page_input_path = "tutorial.md";
+    var mkdocs_page_url = "/qtgrid/tutorial/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> qtgrid</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Tutorial</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#our-minimal-window">Our Minimal Window </a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#instantiate-the-grid">Instantiate the Grid </a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#simply-add-widgets">Simply Add Widgets </a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-layout">How to Layout </a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#left-and-right-expander-for-grid-alignment">Left and Right Expander for Grid Alignment </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#empty-cells">Empty Cells </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-row-gap">A Row Gap </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#horizontal-cell-expander-and-vertical-row-expander">Horizontal Cell Expander and Vertical Row Expander </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#predefined-column-gaps">Predefined Column Gaps </a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-widgets-reissued">Add Widgets Reissued </a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#spans">Spans </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#span-over-the-remaining-row">Span Over the Remaining Row </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prepared-lists">Prepared Lists </a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-labels-and-headers">Common Labels and Headers </a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nested-grids">Nested Grid's </a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference Manual</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://devlog42.github.io/qtgrid/api/">API Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/devlog42/qtgrid">Repository</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">qtgrid</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tutorial</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-qtgrid-tutorial">The qtgrid Tutorial</h1>
+<p>When it comes to setup a <em>QGridLayout</em> the <a href="https://doc.qt.io/qt-5/qtdesigner-manual.html" title="QtDesigner Manual">QtDesigner</a> is a good choice for static requirements. But if you want to fill it up with your own data, not to mention a dynamic building process from scratch, you may find yourself struggling with cell indices and strange layout results, wondering whats happen at the latest on a window resize. Moreover, it's hard to debug, since there is for example no possibility to draw a border around each cell, like in HTML tables.</p>
+<p>This is where <strong>qtgrid</strong> steps into the breach. Its main features are as follows:</p>
+<ul>
+<li>After presetting the maximum number of content columns add your widgets one by one, thus not bothering the indices.</li>
+<li>Activate the <em>work_up</em> mode during development time to have a visual feed back about the otherwise invisible spaces between your widgets.</li>
+<li>Apply expanding columns at the far left or right side to align the whole grid to the left, center, or right.</li>
+<li>Add gaps and expander for columns and rows to influence the layout.</li>
+<li>Prepare internal lists to hold your added widgets for your later disposal.</li>
+<li><em>Grid</em> objects can be nested.</li>
+<li><em>Grid</em> just handles the <em>QGridLayout</em> object for you. Due to that, you still can access it for operations, like setting designated options.</li>
+</ul>
+<p>Well, if that arouse your curiosity, let's smirch our hands into all the gory details ...</p>
+<h2 id="our-minimal-window">Our Minimal Window <a name="minimal-window"></a></h2>
+<p>First of all, we need a minimal window to incorporate our examples. It is derived from <em>QMainWindow</em>, called <em>DemoWindow</em>, and its central widget holds a <em>QVBoxLayout</em> object with three items. The first at the top is a label marked "Demo", the second will be the place for our upcoming grid layout, and the bottom item has a stretchable vertical spacer preventing our grid from expanding downwards.</p>
+<p>The following demo file is already importing the <em>Grid</em> class. It is instantiated in its own <code>grid_instance()</code> method and the returned <em>grid</em> object is composed as a property to the <em>DemoWindow</em>.</p>
+<p>The build-up process for the grid is separately placed into the <code>grid_build()</code> method.</p>
+<p>Note that <strong>qtgrid</strong> works in the same way for PyQt5, PyQt6, and PySide6.</p>
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+
+import sys
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QLabel, QGridLayout
+from PyQt5.QtCore    import Qt
+from PyQt5.QtGui     import QFont
+
+from qtgrid import Grid
+
+class DemoWindow(QMainWindow):
+    &quot;&quot;&quot;
+    Derived Main Window
+    &quot;&quot;&quot;
+    def __init__(self, *args, **kwargs):
+        &quot;&quot;&quot;
+        Setup a central widget with a vertical layout.
+        &quot;&quot;&quot;
+        super(DemoWindow, self).__init__(*args, **kwargs)
+        self.setWindowTitle(&quot;Grid&quot;)
+        widget       = QWidget()     # central widget
+        main_vlayout = QVBoxLayout() # vertical layout
+
+        # Compose and build up the grid
+        self.grid = self.grid_instance()
+        self.grid_build()
+
+        # Fill the vertical layout
+
+        # Top: label &quot;Demo&quot;
+        top_label = QLabel(&quot;Demo&quot;)
+        top_label.setAlignment( Qt.AlignCenter )
+        main_vlayout.addWidget( top_label )
+
+        # Middle: add the demo grid
+        main_vlayout.addLayout( self.grid.layout )
+
+        # Bottom: add a stretchable vertical spacer
+        main_vlayout.addStretch()
+
+        # Establish the vertical layout as the central widget
+        widget.setLayout( main_vlayout )
+        self.setCentralWidget( widget )
+
+    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid()
+        return grid
+
+    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        # Do nothing yet.
+        self.grid.finish()
+
+
+if __name__ == &quot;__main__&quot;:
+    app = QApplication(sys.argv)
+    mainWin = DemoWindow()
+    mainWin.show()
+    sys.exit( app.exec_() )
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/01-demo.png" alt="Minimal Window" title="Minimal Window" />
+    <font size="2">
+      <figcaption>fig.1: Minimal Window</figcaption><a name="fig1"></a>
+    </font>
+</figure>
+
+<p>Unsurprisingly, there is not much to see now. But we have our <code>grid_instance()</code> and <code>grid_build()</code> methods where our code of interest will be put. The <em>self.grid</em> object has a <em>self.grid.layout</em> property holding a <em>QGridLayout</em> object. It was silently instantiated at construction time, since we did not pass our own layout object. The <em>self.grid.finish()</em> call is essential, but more on that in short.</p>
+<h2 id="instantiate-the-grid">Instantiate the Grid <a name="instantiate-grid"></a></h2>
+<p>Let's start rewriting both our <code>grid_instance()</code> and <code>grid_build()</code> methods. You may pass to the optional <strong>layout</strong> construction parameter a <em>QGridLayout</em> object, for example created with <a href="https://doc.qt.io/qt-5/qtdesigner-manual.html" title="QtDesigner Manual">QtDesigner</a>. Note that any items contained in it will be cleared out. In this example, we just instantiate <em>QGridLayout</em> without parameters.</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            layout          = QGridLayout(), # Optional QGridLayout object
+            content_columns = 4,             # Maximum number of content columns
+            expand_left     = False,         # Apply left side expander
+            expand_right    = False,         # Apply right side expander
+
+            # Show visual help while development time
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+
+    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        ############
+        # Add Wdgets
+
+        # Label one
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<p>The idea of <em>Grid</em> is to dynamically add widgets one by one without thinking about cell indices in the grid. Thus, the <strong>content_columns</strong> option is used to let <em>Grid</em> overtake the tedious counting rightly. Its value is related to the number of columns containing the <em>actual content</em>, not counting the (possibly) expanding far left or right columns.</p>
+<p>The <strong>expand_left</strong> and <strong>expand_right</strong> options, when set to True, add corresponding extra columns to the far left and right with stretchable horizontal spacer. This way you can align the whole grid to the left, center, or right.</p>
+<p>The <strong>work_up</strong> option is your friend while you implement the grid layout and its content. When set to True, you'll see colored labels with column index numbers in place of gaps or expander and for yet unused cells.</p>
+<p>Note that we configured the wrapped <em>QGridLayout</em> object, hold in the <em>grid.layout</em> property, right after instantiation.</p>
+<p>You may set any <em>Grid</em> options at construction time or with proper setter methods as described in the <a href="https://devlog42.github.io/qtgrid/reference/" title="Reference Manual">qtgrid reference manual</a>. </p>
+<p>Beside adding a label widget, within the <code>grid_build()</code> method we were using two other important calls. The <code>clear()</code> method is not really necessary here, since the build process is triggered just once. But it's another matter in a dynamic setup, where the grid might be build after a pressed button. In that case you need to clear the grid, otherwise all widgets would be added repeatedly.</p>
+<p>After all widgets have been added, don't forget to call the conclusive method <code>grid.finish()</code>. This actually applies the widgets, gaps, and expander to the underlying <em>QGridLayout</em>, or corresponding colored labels with column indices in <strong>work_up</strong> mode. If you don't call this, you'll see a reminding text in place of your grid. Check this out by commenting out the <code>grid.finish()</code> line and see what happen.</p>
+<p>We now have a grid which actually has one row with four columns, and a label in the first cell. This is how it looks like:</p>
+<figure align="center">
+  <img src="/qtgrid/img/03-demo.png" alt="Empty grid" title="Empty grid" />
+    <font size="2">
+      <figcaption>fig.2: Almost Empty grid</figcaption><a name="fig2"></a>
+    </font>
+</figure>
+
+<p>Because the <strong>work_up</strong> option is True, there are magenta colored cells with their column index numbers, indicating free space for widgets to be added. And this is what we do next.</p>
+<h2 id="simply-add-widgets">Simply Add Widgets <a name="add-widgets"></a></h2>
+<p>For now, please go back to the <code>grid_build()</code> method and add the following lines:</p>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        ############
+        # Add Wdgets
+
+        # Label one
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        # Add a gap with a fixed size
+        grid.add_gap(20)
+
+        # Label two
+        label = QLabel(&quot;Two&quot;)
+        grid.add( label )
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/05-demo.png" alt="Simple adds" title="Simple adds" />
+    <font size="2">
+      <figcaption>fig.3: Simple Adds</figcaption><a name="fig3"></a>
+    </font>
+</figure>
+
+<p>With the <code>add()</code> method you can add any widget to your grid. It has more usable options, like spanning over columns and rows or retaining the passed widget in a previously prepared list. But more on that later. The <code>add_gap()</code> method does what is says and will also be discussed in more detail in the next chapters. </p>
+<p>We decided to have a 20 pixel gap between the first and second label. In the current <strong>work_up</strong> mode we're able to assure that by the yellow colored cell at the right place (index 1). If you now resize the window, then the grid is stretched. Nevertheless, the yellow marked gap remains its size.</p>
+<h2 id="how-to-layout">How to Layout <a name="gaps-expander"></a></h2>
+<p>It is essentially the gaps, expander, or empty cells which influence your grid layout. Thus, it's worth the effort to take a closer look at.</p>
+<h3 id="left-and-right-expander-for-grid-alignment">Left and Right Expander for Grid Alignment <a name="left-right-expander"></a></h3>
+<p>In the previous example (<a href="#fig3">fig.3: Simple Adds</a>), we were happy with the fixed gap. But apart from that, we want the grid to be left aligned and not being stretched as a whole. To do so, change within the <code>grid_instance()</code> method the boolean construction option <strong>expand_right</strong> from False to True. Beyond that, we omit the <strong>layout</strong> option again, resulting in an internally instantiated <em>QGridLayout</em> object.</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,     # Maximum number of content columns
+            expand_left     = False, # Apply left side expander
+            expand_right    = True,  # Apply right side expander
+
+            # Show visual help while development time
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/07-demo.png" alt="Expand right" title="Expand right" />
+    <font size="2">
+      <figcaption>fig.4: Expand right</figcaption><a name="fig4"></a>
+    </font>
+</figure>
+
+<p>You see, a further blue colored cell is added to the right. It contains a stretchable horizontal spacer making sure all cells to the left remains as we want, despite of a window resize. If you add subsequent rows the expanding cells in the right column are automatically incorporated.</p>
+<h3 id="empty-cells">Empty Cells <a name="empty-cells"></a></h3>
+<p>Next, fill up the last unused cell (colored magenta) in the first row. In doing so, we use the earlier seen <code>grid.add_gap()</code> method, but with no arguments. This will left the grid cell as is and means in Qt terms, calling the <em>isEmpty()</em> method on the <em>QLayoutItem</em> object representing this cell would return a <em>True</em> value.</p>
+<p>Beside that, we also add a second row:</p>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        # Label &quot;One&quot;
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        # Add a gap with a fixed size
+        grid.add_gap(20)
+
+        # Label &quot;Two&quot;
+        label = QLabel(&quot;Two&quot;)
+        grid.add( label )
+
+        # Leave this cell explicitly empty.
+        grid.add_gap()
+
+        # We added four elements: Two labels and two gaps.
+        # Since the 'content_columns' value is 4,
+        # the next Element will be added to the next row.
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) ) # Three
+        grid.add_gap(20)            # A fixed size gap
+        grid.add( QLabel(&quot;Four&quot;) )  # Four
+        grid.add_gap()              # An explicit empty cell
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/09-demo.png" alt="Second row" title="Second row" />
+    <font size="2">
+      <figcaption>fig.5: Second row</figcaption><a name="fig5"></a>
+    </font>
+</figure>
+
+<p>It appears that a expander is automatically added to the right side. The empty cells we added with <code>grid.add_gap()</code> directly before those expanders are marked with a gray color.</p>
+<h3 id="a-row-gap">A Row Gap <a name="row-gap"></a></h3>
+<p>In the next step change the boolean value of the <em>Grid</em> construction option <strong>expand_left</strong> to True, which will center our grid.</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,
+            expand_left     = True, # Apply left side expander
+            expand_right    = True, # Apply right side expander
+
+            # Show visual help
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<p>Further, in our <code>grid_build()</code> method we replace both empty cells with a label. Also, we add more rows. One of them is a <em>row gap</em>.</p>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        # Label &quot;One&quot;
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        # Add a gap with a fixed size
+        grid.add_gap(20)
+
+        # Label &quot;Two&quot;
+        label = QLabel(&quot;Two&quot;)
+        grid.add( label )
+
+        # Label &quot;right&quot; (instead of an empty cell)
+        label = QLabel(&quot;right&quot;)
+        grid.add( label )
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) )  # Three
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Four&quot;) )   # Four
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Add a fixed row gap
+        # -------------------
+        grid.add_empty_row(20)
+
+        # Third row
+        # ---------
+        grid.add( QLabel(&quot;Five&quot;) )   # Five
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Six&quot;) )    # Six
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Fourth row
+        # ----------
+        grid.add( QLabel(&quot;Seven&quot;) )  # Seven
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Eight&quot;) )  # Eight
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/11-demo.png" alt="A fixed row gap" title="A fixed row gap" />
+    <font size="2">
+      <figcaption>fig.6: A fixed row gap</figcaption><a name="fig6"></a>
+    </font>
+</figure>
+
+<p>If you think about loops when looking at the rows, you're headed the right direction. But for now, you see our grid is centered and our orange colored row gap has a fixed height of 15 pixel and is located where expected. In the code example we added it at the beginning of a row, but this is not a premise. You can add row gaps in the middle of a line, resulting in a row gap below that line.</p>
+<h3 id="horizontal-cell-expander-and-vertical-row-expander">Horizontal Cell Expander and Vertical Row Expander <a name="h-v-expander"></a></h3>
+<p>So far, we have added gaps involving space of some size between columns and rows.
+But you may also add horizontal or vertical expander using the same methods. To test
+that, we now replace the label "Two" with a <em>horizontal expander</em> and our row gap with a <em>vertical row expander</em>.</p>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        # Label &quot;One&quot;
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        # A fixed size gap
+        grid.add_gap(20)
+
+        # Horizontal expander (instead of label &quot;Two&quot;)
+        grid.add_gap(&quot;expand&quot;)
+
+        # Label &quot;right&quot;
+        label = QLabel(&quot;right&quot;)
+        grid.add( label )
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) )  # Three
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Four&quot;) )   # Four
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Add vertical row expander
+        # -------------------------
+        grid.add_empty_row(&quot;expand&quot;)
+
+        # Third row
+        # ---------
+        grid.add( QLabel(&quot;Five&quot;) )   # Five
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Six&quot;) )    # Six
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Fourth row
+        # ----------
+        grid.add( QLabel(&quot;Seven&quot;) )  # Seven
+        grid.add_gap(20)             # fixed gap
+        grid.add( QLabel(&quot;Eight&quot;) )  # Eight
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/13-demo.png" alt="Expander" title="Expander" />
+    <font size="2">
+      <figcaption>fig.7: Expander</figcaption><a name="fig7"></a>
+    </font>
+</figure>
+
+<p>Resize the window to see the effect. Not to mention the outer left and right expanding columns, there is now a single horizontal expander in our first row. Also the row gap is now expanding vertically and changed its color to cyan to indicate it is not of a fixed size.</p>
+<p>This leads us to find that the <code>add_gap()</code> and <code>add_empty_row()</code> methods can be called in the following ways:</p>
+<pre><code class="language-python">grid.add_gap()         # leave cell explicitly empty
+grid.add_gap(n)        # add a gap of n-pixel width
+grid.add_gap(&quot;expand&quot;) # expand horizontally
+</code></pre>
+<pre><code class="language-python">grid.add_empty_row()         # left all cells in (next) row empty
+grid.add_empty_row(n)        # add a row gap of n-pixel height
+grid.add_empty_row(&quot;expand&quot;) # expand vertically
+</code></pre>
+<p>What I did not mention yet is that the <code>add_gap()</code> method inserts the cell gaps with horizontal extent by default. This means, you can also add gaps with vertical extent. To do that you must add the string "vertical" or "V" as the first argument:</p>
+<pre><code class="language-python">grid.add_gap(&quot;V&quot;)           # leave cell explicitly empty
+grid.add_gap(&quot;V&quot;, n)        # add a gap of n-pixel height
+grid.add_gap(&quot;V&quot;, &quot;expand&quot;) # expand vertically
+</code></pre>
+<h3 id="predefined-column-gaps">Predefined Column Gaps <a name="predefined-column-gaps"></a></h3>
+<p>Now, reexamine our rows. There are the yellow marked cells representing our fixed sized gaps which we had to include in each row. This can be a bit pesky in bigger sized grids. Due to that, we now use the <strong>column_gaps</strong> option during construction time of our grid object.</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,
+            expand_left     = True, # left side expander
+            expand_right    = True, # right side expander
+
+            column_gaps = [
+                (1, 15) # (column_index, width)
+                        #   The 'columns_index' range is from 0 to (content_columns - 1)
+            ],
+
+            # Show visual help
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<p>This way <em>Grid</em> adds the gap cells for us at the designated column, so we can remove each <code>grid.add_gap(20)</code> method call from each row in our previous code. And while we are on it, we replace the horizontal expander in the first row again with the label "Two".</p>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        # Label &quot;One&quot;
+        label = QLabel(&quot;One&quot;)
+        grid.add( label )
+
+        # Label &quot;Two&quot;
+        label = QLabel(&quot;Two&quot;)
+        grid.add( label )
+
+        # Label &quot;right&quot;
+        label = QLabel(&quot;right&quot;)
+        grid.add( label )
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) )  # Three
+        grid.add( QLabel(&quot;Four&quot;) )   # Four
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Add vertical row expander
+        grid.add_empty_row(&quot;expand&quot;)
+
+        # Third row
+        # ---------
+        grid.add( QLabel(&quot;Five&quot;) )   # Five
+        grid.add( QLabel(&quot;Six&quot;) )    # Six
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        # Fourth row
+        # ----------
+        grid.add( QLabel(&quot;Seven&quot;) )  # Seven
+        grid.add( QLabel(&quot;Eight&quot;) )  # Eight
+        grid.add( QLabel(&quot;right&quot;) )  # right
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/15-demo.png" alt="Column Gaps" title="Column Gaps" />
+    <font size="2">
+      <figcaption>fig.8: Column Gaps</figcaption><a name="fig8"></a>
+    </font>
+</figure>
+
+<p>After using the <strong>column_gaps</strong> option we have the chance to unclutter the adds for each row a bit.</p>
+<p>The <strong>column_gaps</strong> option takes a list with a number of 2-tuples. Each tuple defines a column gap with the <em>index number</em> as the first argument and its <em>width</em> as the second. The range is from 0 to (<strong>content_columns</strong> - 1).</p>
+<p>As of <code>add_gap()</code> and <code>add_empty_row()</code>, there are again three ways to define the column gaps:</p>
+<pre><code class="language-python">   column_gaps = [
+       # (column_index, width)
+
+       # Leave all cells in column 1 explicitly empty.
+       # You might also write None instead of 0.
+       (1, 0),
+
+       # All cells in column 1 have a width of 20 pixels.
+       (1, 20),
+
+       # All cells in column 1 contain a horizontal expander.
+       (1, &quot;expand&quot;),
+   ],
+</code></pre>
+<p>By now, all colors which may be shown in <em>work up</em> mode are emerged. For a list of them and their meaning, consider the <code>set_work_up()</code> method in the <a href="https://devlog42.github.io/qtgrid/reference/" title="Reference Manual">qtgrid reference manual</a>.</p>
+<h2 id="add-widgets-reissued">Add Widgets Reissued <a name="add-widgets-reissued"></a></h2>
+<p>As aforementioned, the <code>add()</code> method has some useful options. We now going to see how to span a cell over several columns and rows, and how to keep a added widget in an internal list to have it at our disposal for later use. To have a common basis, here is the complete source of both our methods with slight changes:</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,
+            expand_left     = True,
+            expand_right    = True,
+            column_gaps     = [
+                (1, 20), # (column_index, width)
+            ],
+            # Show visual help
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        grid.add( QLabel(&quot;One&quot;) )   # One
+        grid.add( QLabel(&quot;Two&quot;) )   # Two
+        grid.add( QLabel(&quot;right&quot;) ) # right
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) ) # Three
+        grid.add( QLabel(&quot;Four&quot;) )  # Four
+        grid.add( QLabel(&quot;right&quot;) ) # right
+
+        # Third row
+        # ---------
+        grid.add( QLabel(&quot;Five&quot;) )  # Five
+        grid.add( QLabel(&quot;Six&quot;) )   # Six
+        grid.add( QLabel(&quot;right&quot;) ) # right
+
+        # Fourth row
+        # ----------
+        grid.add( QLabel(&quot;Seven&quot;) ) # Seven
+        grid.add( QLabel(&quot;Eight&quot;) ) # Eight
+        grid.add( QLabel(&quot;right&quot;) ) # right
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/17-demo.png" alt="Adds Example Base" title="Adds Example Base" />
+    <font size="2">
+      <figcaption>fig.9: Adds Example Base</figcaption><a name="fig9"></a>
+    </font>
+</figure>
+
+<h3 id="spans">Spans <a name="spans"></a></h3>
+<p>Let's try out to span the "Four" label in the second row across two columns and rows. Therefore, we can use the <strong>y_span</strong> and <strong>x_span</strong> options:</p>
+<pre><code class="language-python">        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;) ) # Three
+
+        # A 2x2 span of label &quot;Four&quot;
+        label = QLabel(&quot;Four&quot;)
+        label.setAlignment( Qt.AlignCenter )
+        grid.add( label, y_span=2, x_span=2 )
+
+        grid.add( QLabel(&quot;right&quot;) ) # right
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/19-demo.png" alt="A 2x2 span" title="A 2x2 span" />
+    <font size="2">
+      <figcaption>fig.10: A 2x2 Span</figcaption><a name="fig10"></a>
+    </font>
+</figure>
+
+<p>While spanning over a 2 times 2 square the subsequent adds fill up the cells, resulting in five rows instead of four. To get an idea of how the span options operate, we now apply a high value (10) to both the <strong>y_span</strong> and <strong>x_span</strong> options.</p>
+<p><code>grid.add( label, y_span=10, x_span=10 )</code></p>
+<p>Also, add the following lines below the last row to add some test labels:</p>
+<pre><code class="language-python">        # Test adds
+        for i in range (0, 5):
+            grid.add( QLabel(&quot;Test&quot;+str(i+1)) )
+</code></pre>
+<p>This reveals the follwing outcome:</p>
+<figure align="center">
+  <img src="/qtgrid/img/21-demo.png" alt="A 10x10 span" title="A 10x10 span" />
+    <font size="2">
+      <figcaption>fig.11: A 10x10 Span</figcaption><a name="fig11"></a>
+    </font>
+</figure>
+
+<p>It turns out that the excess <strong>x_span</strong> value is simply ignored beyond the <strong>content_columns</strong> value, while the <strong>y_span</strong> continues downwards until it fulfills what it has been told.</p>
+<h3 id="span-over-the-remaining-row">Span Over the Remaining Row <a name="span-remaining-row"></a></h3>
+<p>There is a convenient way to span a added widget over the remaining columns in a row by using the string value "all" for the <strong>x_span</strong> argument. An occasion would be when adding a label heading a group of widgets.</p>
+<p><code>grid.add( QLabel("Some Group :"), x_span="all" )</code></p>
+<p>If that line is applied before the first row in our base example (<a href="#fig9">fig.9</a>) the outcome would be as follows. Note that the column gap is silently overlapped.</p>
+<figure align="center">
+  <img src="/qtgrid/img/22-demo.png" alt="Span Remaining Row" title="Span Remaining Row" />
+    <font size="2">
+      <figcaption>fig.12: Span Remaining Row</figcaption><a name="fig12"></a>
+    </font>
+</figure>
+
+<h3 id="prepared-lists">Prepared Lists <a name="prepared-lists"></a></h3>
+<p>Sooner or later you want to access the widgets after you added them to your grid, especially in a dynamic setup. Be it you want to read from input widgets such as line edits, spin boxes, sliders or you want to write informative text to a label. In the following example we do the latter, although it is a bit artificial here. Typically you compose the instantiated <em>Grid</em> object as a property to another class, from where you can access the prepared lists. Here, for the sake of simplicity, we do that right after we added the widgets in our <code>grid_build()</code> method.</p>
+<p>To "prepare lists" actually means, we tell <em>Grid</em> to define lists internally with given names. Due to that, we use another construction option called <strong>list_names</strong>. It takes itself a list of that mentioned names:</p>
+<pre><code class="language-python">            # Prepare your own lists, to access your added widgets afterwards
+            list_names = [&quot;labels_left&quot;, &quot;labels_center&quot;],
+</code></pre>
+<p>Now, within the <code>add()</code> method, we can use the <strong>to_list</strong> argument to also add the widget to the desired internal list at one go:</p>
+<pre><code class="language-python">        # First row
+        # ---------
+        grid.add( QLabel(&quot;One&quot;), to_list=&quot;labels_left&quot; )   # One
+        grid.add( QLabel(&quot;Two&quot;), to_list=&quot;labels_center&quot; ) # Two
+        grid.add( QLabel(&quot;right&quot;) )                        # right
+</code></pre>
+<p>Repeat this for the other rows. Then, to access the internal lists, use the <code>get_list()</code> method in the following manner:</p>
+<pre><code class="language-python">        # Access my added widgets in grid
+        labels_left   = grid.get_list(&quot;labels_left&quot;)
+        labels_center = grid.get_list(&quot;labels_center&quot;)
+        for i in range( len(labels_left) ):
+            left   = labels_left[i]
+            center = labels_center[i]
+            # Overwrite the labels
+            left.setText(&quot;left side&quot;)
+            center.setText(&quot;center&quot;)
+</code></pre>
+<p>To not get confused, here is the code of both our methods:</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,
+            expand_left     = True,
+            expand_right    = True,
+            column_gaps     = [
+                (1, 20) # (column_index, width)
+            ],
+
+            # Prepare your own lists, to access your added widgets afterwards.
+            list_names = [&quot;labels_left&quot;, &quot;labels_center&quot;],
+
+            # Show visual help
+            work_up = True
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        # First row
+        # ---------
+        grid.add( QLabel(&quot;One&quot;), to_list=&quot;labels_left&quot; )   # One
+        grid.add( QLabel(&quot;Two&quot;), to_list=&quot;labels_center&quot; ) # Two
+        grid.add( QLabel(&quot;right&quot;) )                        # right
+
+        # Second row
+        # ----------
+        grid.add( QLabel(&quot;Three&quot;), to_list=&quot;labels_left&quot; )   # Three
+        grid.add( QLabel(&quot;Four&quot;),  to_list=&quot;labels_center&quot; ) # Four
+        grid.add( QLabel(&quot;right&quot;) )                          # right
+
+        # Third row
+        # ---------
+        grid.add( QLabel(&quot;Five&quot;), to_list=&quot;labels_left&quot; )   # Five
+        grid.add( QLabel(&quot;Six&quot;),  to_list=&quot;labels_center&quot; ) # Six
+        grid.add( QLabel(&quot;right&quot;) )                         # right
+
+        # Fourth row
+        # ----------
+        grid.add( QLabel(&quot;Seven&quot;), to_list=&quot;labels_left&quot; )   # Seven
+        grid.add( QLabel(&quot;Eight&quot;), to_list=&quot;labels_center&quot; ) # Eight
+        grid.add( QLabel(&quot;right&quot;) )                          # right
+
+        ########
+        # Finish
+        grid.finish()
+
+        ###########################
+        # Access my widgets in grid
+        labels_left   = grid.get_list(&quot;labels_left&quot;)
+        labels_center = grid.get_list(&quot;labels_center&quot;)
+        for i in range( len(labels_left) ):
+            left   = labels_left[i]
+            center = labels_center[i]
+            # Overwrite the labels
+            left.setText(&quot;left side&quot;)
+            center.setText(&quot;center&quot;)
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/23-demo.png" alt="Using Prepared Lists" title="Using Prepared Lists" />
+    <font size="2">
+      <figcaption>fig.13: Using Prepared Lists</figcaption><a name="fig13"></a>
+    </font>
+</figure>
+
+<h2 id="common-labels-and-headers">Common Labels and Headers <a name="common-labels-headers"></a></h2>
+<p>The <strong>qtgrid</strong> package is mainly about widgets layout. Though, the labels you're using should be probably of a common design. There might be bold text heading appointed sections or at least you want some sort of fonts and margins around the text. On the one hand, to vary the design later on could be tedious, if you had to apply it individually. On the other hand, writing the code to configure your labels right before you add them blows your code up and makes it unclear. One solution path might be the <em>prepared lists</em> as seen in the <a href="#prepared-lists">last chapter</a>. But there is a more nifty way that (can) obviate the need for lists in this case.</p>
+<p>The basic concept is to first create all kinds of label types before you proceed to work up your grid. Note that this includes headers as well, since headers are nothing but labels. Then, after object construction, you tell <em>Grid</em> to take your labels as a blueprint. Say, we have initialized a variable named <em>laBold</em> with an appropriate configured <em>QLabel</em> object. Then, the following method stores it internally:</p>
+<p><code>grid.set_label_source( name_id="bold", label=laBold )</code></p>
+<p>The value of the <strong>name_id</strong> argument is the key if you want to make use of it along with the <code>add_label()</code> method:</p>
+<p><code>grid.add_label( name_id="bold", text="One:" )</code></p>
+<p><code>grid.add_label("bold", "One:")</code></p>
+<p>Under the hood, this instantiates a fresh new <em>QLabel()</em> object, applies the text "One:" to it and performs a deep copy of all attributes from <em>laBold</em> to this new label. In case you think of future use, you still can take recourse to prepared lists along with the <strong>to_list</strong> argument.</p>
+<p><code>grid.add_label("bold", "One:", to_list="labels_left")</code></p>
+<p>All in all, the following are now our two methods. Note that the <strong>work_up</strong> option is set this time to <em>False</em>.</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 4,
+            expand_left     = False,
+            expand_right    = True,
+            column_gaps     = [
+                (1, 20) # (column_index, width)
+            ],
+            # Show visual help
+            work_up = False
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid
+        grid.clear()
+
+        ##################
+        # Configure labels
+
+        # header
+        laHeader = QLabel()
+        laHeader.setMargin( 5 )
+
+        font = QFont()
+        font.setFamily(&quot;Helvetica&quot;)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setPointSize( 12 )
+        laHeader.setFont( font )
+
+        # normal
+        laNormal = QLabel()
+        laNormal.setMargin( 5 )
+
+        # bold
+        laBold = QLabel()
+        laBold.setAlignment( Qt.AlignVCenter | Qt.AlignRight )
+        laBold.setMargin( 5 )
+
+        font = QFont()
+        font.setFamily(&quot;Sans&quot;)
+        font.setBold(True)
+        font.setPointSize( 9 )
+        laBold.setFont( font )
+
+        ###################
+        # Set label sources
+        grid.set_label_source( name_id=&quot;hdr1&quot;,   label=laHeader )
+        grid.set_label_source( name_id=&quot;normal&quot;, label=laNormal )
+        grid.set_label_source( name_id=&quot;bold&quot;,   label=laBold )
+
+        #############
+        # Add widgets
+
+        # Header row
+        # ----------
+        grid.add_label(&quot;hdr1&quot;, &quot;Header A&quot;)
+        grid.add_label(&quot;hdr1&quot;, &quot;Header B&quot;, x_span=2 )
+
+        # First row
+        # ---------
+        grid.add_label(&quot;bold&quot;,   &quot;One:&quot;)  # One
+        grid.add_label(&quot;normal&quot;, &quot;Two&quot;)   # Two
+        grid.add_label(&quot;normal&quot;, &quot;right&quot;) # right
+
+        # Second row
+        # ----------
+        grid.add_label(&quot;bold&quot;,   &quot;Three:&quot;) # Three
+        grid.add_label(&quot;normal&quot;, &quot;Four&quot;)   # Four
+        grid.add_label(&quot;normal&quot;, &quot;right&quot;)  # right
+
+        # Third row
+        # ---------
+        grid.add_label(&quot;bold&quot;,   &quot;Five:&quot;) # Five
+        grid.add_label(&quot;normal&quot;, &quot;Six&quot;)   # Six
+        grid.add_label(&quot;normal&quot;, &quot;right&quot;) # right
+
+        # Fourth row
+        # ----------
+        grid.add_label(&quot;bold&quot;,   &quot;Seven:&quot;) # Seven
+        grid.add_label(&quot;normal&quot;, &quot;Eight&quot;)  # Eight
+        grid.add_label(&quot;normal&quot;, &quot;right&quot;)  # right
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/25-demo.png" alt="Using Label Sources" title="Using Label Sources" />
+    <font size="2">
+      <figcaption>fig.14: Using Label Sources</figcaption><a name="fig14"></a>
+    </font>
+</figure>
+
+<p>As implementable this is, you might not want to grapple with label configuration in an early stage. Therefore, the following two keywords are intended as stepping-stones: "default" and "default-header". Both are preconfigured labels, although not claiming to be of magnificent design. But this let you instantly give your grid a go, focusing on layout in the first place.</p>
+<p><code>grid.add_label("default-header", "Some Header")</code></p>
+<p><code>grid.add_label("default", "Some text")</code></p>
+<blockquote>
+<p><strong>Tip:</strong> When it comes to design issues, you may want to use <a href="https://doc.qt.io/qt-5/stylesheet-examples.html" title="Qt Style Sheets">Qt Style Sheets</a> which is mostly like CSS for HTML.</p>
+</blockquote>
+<h2 id="nested-grids">Nested Grid's <a name="nested-grid"></a></h2>
+<p>You can nest <em>Grid</em> objects by adding them to a cell as you would do for other widgets. There is not much to tell about, thus consider this self speaking example:</p>
+<pre><code class="language-python">    def grid_instance(self):
+        &quot;&quot;&quot;
+        Instantiation of Grid
+        &quot;&quot;&quot;
+        grid = Grid(
+            content_columns = 3,
+            expand_left     = True,
+            expand_right    = True,
+            work_up         = False
+        )
+        # QGridLayout settings
+        grid.layout.setSpacing(1)
+        return grid
+</code></pre>
+<pre><code class="language-python">    def grid_build(self):
+        &quot;&quot;&quot;
+        Build up the grid
+        &quot;&quot;&quot;
+        grid = self.grid # this is the outer grid
+        grid.clear()
+
+        ##################################
+        # Instantiate the inner Grid
+        inner_grid = Grid(
+            content_columns = 2,
+            expand_left     = False,
+            expand_right    = False,
+            work_up         = False
+        )
+        # QGridLayout settings
+        inner_grid.layout.setSpacing(1)
+        inner_grid.clear()
+
+        ############
+        # Inner Grid
+        inner_grid.add_label(&quot;default&quot;, &quot;W&quot;)
+        inner_grid.add_label(&quot;default&quot;, &quot;X&quot;)
+        inner_grid.add_label(&quot;default&quot;, &quot;Y&quot;)
+        inner_grid.add_label(&quot;default&quot;, &quot;Z&quot;)
+        inner_grid.finish()
+
+        ############
+        # Outer Grid
+        grid.add_label(&quot;default&quot;, &quot;One&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Two&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Three&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Four&quot;)
+
+        grid.add( inner_grid ) # nest the grids
+
+        grid.add_label(&quot;default&quot;, &quot;Six&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Seven&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Eight&quot;)
+        grid.add_label(&quot;default&quot;, &quot;Nine&quot;)
+        grid.finish()
+</code></pre>
+<figure align="center">
+  <img src="/qtgrid/img/27-demo.png" alt="Nested Grid's" title="Nested Grid's" />
+    <font size="2">
+      <figcaption>fig.15: Nested Grid's</figcaption><a name="fig15"></a>
+    </font>
+</figure>
+
+<p>At this juncture, this was it from my end. I hope the <em>Grid</em> package is a helpful tool for you. For your daily work you may take a look at the <a href="https://devlog42.github.io/qtgrid/reference/" title="Reference Manual">qtgrid reference manual</a> and if you have hints for me related to this tutorial, don't hesitate to send me an email.</p>
+<p>Thanx, and happy coding<br />
+&nbsp;&nbsp;&nbsp;Detlef von der Hülst (devlog@gmx.de)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../reference/" class="btn btn-neutral float-right" title="Reference Manual">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../reference/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

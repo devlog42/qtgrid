@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://devlog42.github.io/qtgrid/reference/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Reference Manual - qtgrid</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reference Manual";
+    var mkdocs_page_input_path = "reference.md";
+    var mkdocs_page_url = "/qtgrid/reference/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> qtgrid</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorial/">Tutorial</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Reference Manual</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#instantiation-and-usage">Instantiation and Usage </a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#set-instantiation-options">Set Instantiation Options </a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#set_column_gaps">set_column_gaps() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_expand_left">set_expand_left() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_expand_right">set_expand_right() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_list_names">set_list_names() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_content_columns">set_content_columns() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_work_up">set_work_up() </a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods </a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add">add() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add_empty_row">add_empty_row() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add_gap">add_gap() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add_label">add_label() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear">clear() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finish">finish() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_list">get_list() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_list_names">get_list_names() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_content_columns">get_content_columns() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_label">get_label() </a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_label_source">set_label_source() </a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://devlog42.github.io/qtgrid/api/">API Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/devlog42/qtgrid">Repository</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">qtgrid</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Reference Manual</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-qtgrid-reference-manual">The qtgrid Reference Manual</h1>
+<p>Taken for granted, the primary source is the <a href="https://devlog42.github.io/qtgrid/api/" title="API Documentation">API documentation</a>. The <a href="https://devlog42.github.io/qtgrid/tutorial/" title="qtgrid Tutorial">qtgrid tutorial</a> gives an in deep explanation, and this reference manual is intended to give an overview for the everyday module usage.</p>
+<h2 id="instantiation-and-usage">Instantiation and Usage <a name="instatiation"></a></h2>
+<p>The following two instantiations are equivalent:</p>
+<pre><code class="language-python">grid = Grid()
+</code></pre>
+<pre><code class="language-python">grid = Grid(
+    layout          = QGridLayout(),
+    content_columns = 1,
+    expand_left     = False,
+    expand_right    = False,
+    column_gaps     = [],
+    list_names      = [],
+    work_up         = False
+)
+</code></pre>
+<dl>
+  <dt>layout</dt>
+  <dd>
+    Optional <i>QGridLayout</i> object whose items will be cleared. <br/>
+    If left out, it will be instantiated within the <i>Grid</i> constructor.
+  </dd>
+  <dt>content_columns</dt>
+  <dd>
+    The maximum number of content columns. <br/>
+    Optional integer n with n >= 1 and n > max number of <b>column_gaps</b> (see below). Default 1.
+  </dd>
+  <dt>expand_left</dt>
+  <dd>
+    Set whether or not a far left expanding column will be added, thus influencing the grid alignment.<br/>
+    Optional boolean value. Default False.
+  </dd>
+  <dt>expand_right</dt>
+  <dd>
+    Set whether or not a far right expanding column will be added, thus influencing the grid alignment.<br/>
+    Optional boolean value. Default False.
+  </dd>
+  <dt>column_gaps</dt>
+  <dd>
+    Define gap cells for complete columns.<br/>
+    Optional list of tuples. Default [ ].<br/>
+    See also the <a href="#set-column-gaps">set_column_gaps()</a> method.
+  </dd>
+  <dt>list_names</dt>
+  <dd>
+    Prepare internal lists with given names. <br/>
+    Optional list of strings naming internal lists to create. Default [ ]. <br/>
+    The lists purpose is to hold added widgets for later disposal. <br/>
+    See also the <a href="#set-list-names">set_list_names()</a> method.
+  </dd>
+  <dt>work_up</dt>
+  <dd>
+    Set whether or not to activate the <i>work up</i> mode.<br/>
+    Optional boolean value. Default is False.<br/>
+    In <i>work-up</i> mode a visual feed back is given for otherwise invisible cells. <br/>
+    See also the <a href="#set-work-up">set_work_up()</a> method for a list of used colors and their meanings.
+  </dd>
+</dl>
+
+<p>In most cases the best place for the <em>Grid</em> instantiation is within class constructors while the dynamic build process is delegated to another method. You may apply settings for the wrapped <em>QGridLayout</em> object directly after the instantiation.</p>
+<pre><code class="language-python">class Example():
+    def __init__(self):
+
+    self.grid = Grid(
+        layout       = QGridLayout(), # Optional QGridLayout object
+        max_x        = 8,             # Maximum number of content columns
+        expand_left  = False,
+        expand_right = True,
+
+        column_gaps  = [
+            # Define gaps for complete columns
+            (0, 0),        # (column_index, width) / &quot;width&quot; can be ...
+            (2, None),     #   - 0 or None := leave cells explicitly empty
+            (4, &quot;expand&quot;), #   - &quot;expand&quot;  := add horizontal expander
+            (6, 20),       #   - number    := add fixed sized column gaps
+        ],
+
+        # Prepare internal lists to hold widgets for my disposal
+        list_names = [&quot;headers&quot;, &quot;labels&quot;],
+
+        # Show visual help
+        work_up = True
+    )
+    # QGridLayout settings
+    self.grid.layout.setSpacing(1)
+</code></pre>
+<p>In your methods where the grid is build up you often call the <a href="#clear">clear()</a> method, otherwise the widgets would be added repeatedly. At the end you need to call the <a href="#finish">finish()</a> method to actually apply all added widgets, gaps, and expander.</p>
+<pre><code class="language-python">    def build_grid(self):
+        grid = self.grid
+        grid.clear()
+
+        #############
+        # Add widgets
+
+        ########
+        # Finish
+        grid.finish()
+</code></pre>
+<h2 id="set-instantiation-options">Set Instantiation Options <a name="after-instatiation"></a></h2>
+<p>Use the following methods in case you did not set at construction time.<br />
+<strong>Note:</strong> You can do that only before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<pre><code class="language-python">grid.clear()
+grid.set_content_columns( 8 )
+grid.set_expand_left( False )
+grid.set_expand_right( True )
+grid.set_column_gaps(
+    [ (0, 0), (2, None), (4, &quot;expand&quot;), (6, 20) ]
+)
+grid.set_list_names(
+    [ &quot;headers&quot;, &quot;labels&quot; ]
+)
+grid.set_work_up( True )
+</code></pre>
+<h3 id="set_column_gaps">set_column_gaps() <a name="set-column-gaps"></a></h3>
+<p>Define gap cells for complete columns. If called without argument, all column gaps will be removed. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_column_gaps( column_gaps=[ &lt;tuple&gt;, &lt;tuple&gt;, ... ] )</code></p>
+<pre><code class="language-python">grid.set_column_gaps( column_gaps=[ (0,20), (2,None), (4,&quot;expand&quot;), (6,20) ] )
+grid.set_column_gaps([
+    (0, 0),        # (column_index, width) / &quot;width&quot; can be ...
+    (2, None),     #   - 0 or None := leave cells explicitly empty
+    (4, &quot;expand&quot;), #   - &quot;expand&quot;  := add horizontal expander
+    (6, 20),       #   - number    := add fixed sized column gap
+])
+grid.set_column_gaps()
+</code></pre>
+<dl>
+  <dt>column_gaps</dt>
+  <dd>
+    Optional <i>column_gaps</i> argument is a list of tuples. <br/>
+    Each tuple has the form: <b>(column_index, width)</b>.
+    <ul>
+     <li><i>column_index</i> <br/>integer n with 0 <= n < <b>content_columns</b> number</li>
+     <li><i>width</i> <br/>keyword None, or string "expand", or int >= 0</li>
+    </ul>
+  </dd>
+</dl>
+
+<p>The overall used tuples, thus the number of column gaps, must be less than <em>content_columns</em> number.
+The <em>width</em> value can be None, int &gt;= 0, or the string "expand". Here, value <em>0</em> and <em>None</em> are equivalent.</p>
+<h3 id="set_expand_left">set_expand_left() <a name="set-expand-left"></a></h3>
+<p>Set whether or not a far left expanding column is added, thus influencing the grid alignment. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_expand_left( flag=&lt;bool&gt; )</code></p>
+<pre><code class="language-python">grid.set_expand_left( flag=False )
+grid.set_expand_left( False )
+grid.set_expand_left()
+</code></pre>
+<dl>
+  <dt>flag</dt>
+  <dd>
+    Optional boolean value. Default False.
+  </dd>
+</dl>
+
+<h3 id="set_expand_right">set_expand_right() <a name="set-expand-right"></a></h3>
+<p>Set whether or not a far right expanding column is added, thus influencing the grid alignment. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_expand_right( flag=&lt;bool&gt; )</code></p>
+<pre><code class="language-python">grid.set_expand_right( flag=False )
+grid.set_expand_right( False )
+grid.set_expand_right()
+</code></pre>
+<dl>
+  <dt>flag</dt>
+  <dd>
+    Optional boolean value. Default False.
+  </dd>
+</dl>
+
+<h3 id="set_list_names">set_list_names() <a name="set-list-names"></a></h3>
+<p>Prepare internal lists with given names. If called without the argument, all internal lists will be removed. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_list_names( names=[ &lt;str&gt;, &lt;str&gt;, ... ] )</code></p>
+<pre><code class="language-python">grid.set_list_names( names=[ &quot;list1&quot;, &quot;list2&quot; ] )
+grid.set_list_names( [&quot;list1&quot;, &quot;list2&quot;] )
+grid.set_list_names()
+</code></pre>
+<dl>
+  <dt>names</dt>
+  <dd>
+    Optional list with string names identifying the internal lists to be created.
+  </dd>
+</dl>
+
+<p>You can add widgets to those prepared lists with the <em>to_list</em> argument along with the <a href="#add">add()</a> or <a href="#add-label">add_label()</a> methods. After all, use the <a href="#get-list-names">get_list_names()</a>, or <a href="#get-list">get_list()</a> methods to access the lists in turn.</p>
+<h3 id="set_content_columns">set_content_columns() <a name="set-content-columns"></a></h3>
+<p>Set the maximum number of content columns. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_content_columns( content_columns=&lt;int&gt; )</code></p>
+<pre><code class="language-python">grid.set_content_columns( content_columns=1 )
+grid.set_content_columns( 1 )
+</code></pre>
+<dl>
+  <dt>content_columns</dt>
+  <dd>
+    Optional integer n with n >= 1 and n > number of <b>column_gaps</b>. Default is 1.
+  </dd>
+</dl>
+
+<p>See also the <a href="#set-column-gaps">set_column_gaps()</a> method.</p>
+<h3 id="set_work_up">set_work_up() <a name="set-work-up"></a></h3>
+<p>Set whether or not to activate the <em>work up</em> mode. Can only be used before any widget is added or after calling the <a href="#clear">clear()</a> method.</p>
+<p><code>grid.set_work_up( flag=&lt;bool&gt; )</code></p>
+<pre><code class="language-python">grid.set_work_up( flag=False )
+grid.set_work_up( False )
+grid.set_work_up()
+</code></pre>
+<dl>
+  <dt>flag</dt>
+  <dd>
+    Optional boolean value. Default is False.
+  </dd>
+</dl>
+
+<p>In <em>work up</em> mode otherwise invisible cells are colored indicating the following meaning:</p>
+<dl>
+  <dt>Magenta</dt>
+  <dd>
+    unused cell
+  </dd>
+  <dt>Blue</dt>
+  <dd>
+    horizontal expander
+  </dd>
+  <dt>Cyan</dt>
+  <dd>
+    vertical expander
+  </dd>
+  <dt>Yellow</dt>
+  <dd>
+    fixed sized horizontal gap
+  </dd>
+  <dt>Orange</dt>
+  <dd>
+    fixed sized vertical gap
+  </dd>
+  <dt>Grey</dt>
+  <dd>
+    explicit empty cell
+  </dd>
+</dl>
+
+<h2 id="methods">Methods <a name="methods"></a></h2>
+<h3 id="add">add() <a name="add"></a></h3>
+<p>Add arbitrary widgets to the <em>grid</em>. </p>
+<p><code>grid.add( widget=&lt;QWidget&gt;, y_span=&lt;int&gt;, x_span=&lt;int|"all"&gt;, to_list=&lt;str&gt; )</code></p>
+<pre><code class="language-python">grid.add( widget=WIDGET, y_span=1, x_span=1, to_list=&quot;list_name&quot; )
+grid.add( WIDGET, y_span=2, x_span=2 )
+grid.add( WIDGET, x_span=&quot;all&quot; )
+grid.add( WIDGET )
+</code></pre>
+<dl>
+  <dt>widget</dt>
+  <dd>
+    Required QWidget object to add.
+  </dd>
+  <dt>y_span</dt>
+  <dd>
+    Optional int >= 1. Default 1.
+  </dd>
+  <dt>x_span</dt>
+  <dd>
+    Optional int >= 1, or string "all". Default 1.
+  </dd>
+  <dt>to_list</dt>
+  <dd>
+    Optional string identifying an internal prepared list, or the None keyword. Default None.
+  </dd>
+</dl>
+
+<p>The <em>to_list</em> argument can be used to not only add the widget to the <em>grid</em>, but also to a prepared internal list for later use. See also the <a href="#set-list-names">set_list_names()</a> method. </p>
+<p>The <em>y_span</em> and <em>x_span</em> integer arguments spans the cell over the given number of rows and columns. If <em>x_span</em> value is "all" the cell spans over the remaining row.</p>
+<h3 id="add_empty_row">add_empty_row() <a name="add-empty-row"></a></h3>
+<p><code>grid.add_empty_row( height=&lt;int|"expand"&gt; )</code></p>
+<pre><code class="language-python">grid.add_empty_row()     # same as None
+grid.add_empty_row(0)    # same as None
+grid.add_empty_row(None) # explicitly empty
+grid.add_empty_row(20)
+grid.add_empty_row(&quot;expand&quot;)
+</code></pre>
+<p>Add a row gap.</p>
+<dl>
+  <dt>height</dt>
+  <dd>
+    Optional keyword None, int >= 0, or string "expand". Default None.
+  </dd>
+</dl>
+
+<p>If not in the first column: fill the remaining row with explicit empty cells (colored grey), then ... <br/>
+In the first column of a row: apply a vertical gap by adding a single cell spawning the complete row.</p>
+<p>Above, the first three calls are all equivalent. When given a integer number, the row gets a fixed height in pixels. If the string "expand" is used, the row expands in vertical direction.</p>
+<p>See the <a href="#set-work-up">set_work_up()</a> method for a list of displayed colors in <em>work_up</em> mode.</p>
+<h3 id="add_gap">add_gap() <a name="add-gap"></a></h3>
+<p>Add a cell gap.</p>
+<p><code>grid.add_gap( direction=&lt;str&gt;, length=&lt;int|"expand"&gt;, y_span=&lt;int&gt;, x_span=&lt;int&gt; )</code></p>
+<pre><code class="language-python"># horizontal direction
+grid.add_gap(&quot;H&quot;)           # same as None
+grid.add_gap(&quot;H&quot;, 0)        # same as None
+grid.add_gap(&quot;H&quot;, None)     # explicitly empty
+grid.add_gap(&quot;H&quot;, 20)
+grid.add_gap(&quot;H&quot;, &quot;expand&quot;)
+
+# horizontal direction is default
+grid.add_gap()         # same as None
+grid.add_gap(0)        # same as None
+grid.add_gap(None)     # explicitly empty
+grid.add_gap(20)
+grid.add_gap(&quot;expand&quot;)
+
+# vertical direction
+grid.add_gap(&quot;V&quot;)           # same as None
+grid.add_gap(&quot;V&quot;, 0)        # same as None
+grid.add_gap(&quot;V&quot;, None)     # explicitly empty
+grid.add_gap(&quot;V&quot;, 20)
+grid.add_gap(&quot;V&quot;, &quot;expand&quot;)
+</code></pre>
+<dl>
+  <dt>direction</dt>
+  <dd>
+    None, "H" (default) , "V", "horizontal", or "vertical"
+  </dd>
+  <dt>length</dt>
+  <dd>
+    None, int >= 0, or "expand", default None
+  </dd>
+  <dt>y_span</dt>
+  <dd>
+    Optional int >= 1. Default is 1.
+  </dd>
+  <dt>x_span</dt>
+  <dd>
+    Optional int >= 1. Default is 1.
+  </dd>
+</dl>
+
+<p>The <em>direction</em> argument comes into account when the gap has a fixed size or should be an expander. It defaults to the horizontal direction. Thus, to add a gap horizontally, you may left out the <em>direction</em> argument :</p>
+<pre><code class="language-python">grid.add_gap(20)         # add horizontal fixed size gap
+grid.add_gap(&quot;expander&quot;) # add horizontal expander
+</code></pre>
+<p>In order to orient vertically use the "V" or "vertical" value for the <em>direction</em> argument :</p>
+<pre><code class="language-python">grid.add_gap(&quot;V&quot;, 20)
+grid.add_gap(&quot;V&quot;, &quot;expander&quot;)
+</code></pre>
+<p>See the <a href="#set-work-up">set_work_up()</a> method for a list of displayed colors in <em>work_up</em> mode.</p>
+<h3 id="add_label">add_label() <a name="add-label"></a></h3>
+<p>Add a new label to the grid. Copy the label configuration from a previously stored label.</p>
+<p><code>grid.add_label( name_id=&lt;str&gt;, text=&lt;str&gt;, y_span=&lt;int&gt;, x_span=&lt;int|"all"&gt;, to_list=&lt;str&gt; )</code></p>
+<pre><code class="language-python">grid.add_label(
+    name_id = &quot;foo&quot;,
+    text    = &quot;lorem ipsum&quot;,
+    y_span  = 2,
+    x_span  = 2,
+    to_list = &quot;list1&quot;
+)
+grid.add_label(&quot;foo&quot;, &quot;lorem ipsum&quot;)
+grid.add_label(&quot;foo&quot;, &quot;lorem ipsum&quot;, x_span=&quot;all&quot;)
+</code></pre>
+<dl>
+  <dt>name_id</dt>
+  <dd>
+    Required string identifying an internally stored label widget. <br>
+    See also the <a href="#set-label-source">set_label_source().</a> <br>
+    That label serves as a copy source for its attributes.
+  </dd>
+  <dt>text</dt>
+  <dd>
+    Optional text for the new label. Default is ''.
+  </dd>
+  <dt>y_span</dt>
+  <dd>
+    Optional integer n with n >= 1. Default is 1.
+  </dd>
+  <dt>x_span</dt>
+  <dd>
+    Optional integer n with n >= 1, or string "all". Default is 1.
+  </dd>
+  <dt>to_list</dt>
+  <dd>
+    Optional string identifying an internally stored list, or the None keyword. Default is None.
+  </dd>
+  <dt>x_span_remain</dt>
+  <dd>
+    Optional boolean value. Default is False.
+  </dd>
+</dl>
+
+<p>The <em>name_id</em> argument references to a label preset. If the <em>x_span</em> value is "all" the added label
+spans over the remaining row. For your disposla, you may also add the label to an internal list with
+the <em>to_list</em> argument, or use the <a href="#get-label">get_label()</a> method.</p>
+<p>There are predefined defaults:</p>
+<pre><code class="language-python">grid.add_label(&quot;default&quot;, &quot;lorem ipsum&quot;)
+grid.add_label(&quot;default-header&quot;, &quot;Some Header&quot;)
+</code></pre>
+<h3 id="clear">clear() <a name="clear"></a></h3>
+<p>Clear all cells and the underlying <em>QGridLayout</em> object. You likely want to call this in your method where the <em>grid</em> is build-up dynamically. Otherwise, all widgets are added repeatedly. See <a href="#instatiation">Instantiation and Usage</a>.</p>
+<p><code>grid.clear()</code></p>
+<p>This removes each grid cell, resets internal indices, removes all spans and reinitialize all prepared lists.
+See also the <a href="#set-list-names">set_list_names</a> method.</p>
+<h3 id="finish">finish() <a name="finish"></a></h3>
+<p>Always call this method after you added all your widgets.</p>
+<p><code>grid.finish()</code></p>
+<p>It applies all gaps, expander and marks unused cells (colored magenta).
+See the <a href="#set-work-up">set_work_up()</a> method for a list of displayed colors in <strong>work_up</strong> mode.</p>
+<h3 id="get_list">get_list() <a name="get-list"></a></h3>
+<p>Get <em>name</em> list of widgets as it was prepared with <a href="#set-list-names">set_list_names</a>.</p>
+<p><code>&lt;list of QWidget objects&gt; = grid.get_list( name=&lt;str&gt; )</code></p>
+<pre><code class="language-python">for widget in grid.get_list(&quot;list1&quot;):
+    pass
+</code></pre>
+<p>The returned list contains <em>QWidget</em> objects added with the <a href="#add">add()</a> or <a href="#add-label">add_label()</a> methods.</p>
+<dl>
+  <dt>name</dt>
+  <dd>
+    Required string identifying a stored internal list.
+  </dd>
+</dl>
+
+<h3 id="get_list_names">get_list_names() <a name="get-list-names"></a></h3>
+<p>Get all custom list names as they were prepared with <a href="#set-list-names">set_list_names()</a>.</p>
+<p><code>&lt;list of str&gt; = grid.get_list_names()</code></p>
+<pre><code class="language-python">for name in grid.get_list_names():
+    for widget in grid.get_list( name ):
+        pass
+</code></pre>
+<h3 id="get_content_columns">get_content_columns() <a name="get-content-columns"></a></h3>
+<p>Get the maximum number of content columns.</p>
+<p><code>&lt;int&gt; = grid.get_content_columns()</code></p>
+<h3 id="get_label">get_label() <a name="get-label"></a></h3>
+<p>Get stored <em>QLabel</em> object by <em>name_id</em>.</p>
+<p><code>&lt;QLabel&gt; = grid.get_label( name_id=&lt;str&gt; )</code></p>
+<pre><code class="language-python">label = grid.get_label( name_id=&quot;foo&quot; )
+label = grid.get_label( &quot;foo&quot; )
+</code></pre>
+<p>Labels are stored with <a href="#set-label-source">set_label_source</a>.<br></p>
+<dl>
+  <dt>name_id</dt>
+  <dd>
+    Required string identifying a stored QLabel object.
+  </dd>
+</dl>
+
+<h3 id="set_label_source">set_label_source() <a name="set-label-source"></a></h3>
+<p>Store a given QLabel object as a copy source for its attributes.</p>
+<p><code>grid.set_label_source( name_id="foo", label=myLabel )</code></p>
+<p><code>grid.set_label_source("foo", myLabel)</code></p>
+<p>The <em>name_id</em> is the key to access the label with the <a href="#add-label">add_label()</a>, or <a href="#get-label">get_label()</a> methods.</p>
+<dl>
+  <dt>name_id</dt>
+  <dd>
+    Required string id for the given label to be stored.
+  </dd>
+  <dt>label</dt>
+  <dd>
+    Required <i>QLabel</i> object with proper configuration.
+  </dd>
+</dl>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../tutorial/" class="btn btn-neutral" title="Tutorial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tutorial/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

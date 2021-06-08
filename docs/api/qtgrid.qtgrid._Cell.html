@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>qtgrid.qtgrid._Cell : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><code><a href="qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid.html">qtgrid</a></code>.<code><a href="qtgrid.qtgrid._Cell.html">_Cell</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">_Cell</span>:</code></p>
+        <p><a href="classIndex.html#qtgrid.qtgrid._Cell">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p><em>_Cell</em> objects are aggregated to <code><a href="qtgrid.qtgrid._Cells.html#_list">_Cells._list</a></code>, which itself is composed to <code><a href="qtgrid.qtgrid.Grid.html#cells">Grid.cells</a></code></p>
+<p>A <em>_Cell</em> has an <strong>item</strong> property holding an object together with coordinates and span values.</p>
+</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id9">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span>Example</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#item">item</a></code></td>
+    <td><span>must be None or <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code>, or <code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code>, or QSpacerItem, QLayout, QWidget</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#y">y</a></code></td>
+    <td><span>int y coordinate</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#x">x</a></code></td>
+    <td><span>int x coordinate</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#y_span">y_span</a></code></td>
+    <td><span>int y direction span</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#x_span">x_span</a></code></td>
+    <td><span>int x direction span</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="qtgrid.qtgrid._Cell.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, item=None, y=None, x=None, y_span=1, x_span=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Example</p>
+<pre class="py-doctest">
+cell = _Cell( item=_Gap(...),   y=0, x=1, y_span=2, x_span=2 )
+cell = _Cell( _Grid(...), 0,1, y_span=2, x_span=2 )
+cell = _Cell( *QSpacerItem*,    0,1, y_span=2, x_span=2 )
+cell = _Cell( *QLayout*, 0,1 )
+cell = _Cell( *QWidget*, 0,1 )
+<span class="py-comment">####</span>
+grid.cells.add( cell )</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">item</td><td>None or <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code>, or <code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code>, or QSpacerItem, QLayout, QWidget</td></tr><tr><td></td><td class="fieldArg">y</td><td>int y coordinate</td></tr><tr><td></td><td class="fieldArg">x</td><td>int x coordinate</td></tr><tr><td></td><td class="fieldArg">y_span</td><td>int y direction span</td></tr><tr><td></td><td class="fieldArg">x_span</td><td>int x direction span</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cell.item">
+    
+  </a>
+  <a name="item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">item</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>must be None or <code><a href="qtgrid.qtgrid._Gap.html">_Gap</a></code>, or <code><a href="qtgrid.qtgrid.Grid.html">Grid</a></code>, or QSpacerItem, QLayout, QWidget</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cell.y">
+    
+  </a>
+  <a name="y">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">y</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>int y coordinate</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cell.x">
+    
+  </a>
+  <a name="x">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">x</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>int x coordinate</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cell.y_span">
+    
+  </a>
+  <a name="y_span">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">y_span</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>int y direction span</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="qtgrid.qtgrid._Cell.x_span">
+    
+  </a>
+  <a name="x_span">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">x_span</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div>int x direction span</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for <a href="https://devlog42.github.io/qtgrid/">gtgrid</a>, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-06-08 17:26:14.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
