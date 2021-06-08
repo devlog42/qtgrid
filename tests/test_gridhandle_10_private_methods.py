@@ -15,6 +15,7 @@ else:
 
 # Note: Method "_set_default_label_sources" has already been tested.
 
+
 def test__get_remaining_x_span(grid):
     # The left expanding column counts, but not the right one.
     grid.set_content_columns( 6 )

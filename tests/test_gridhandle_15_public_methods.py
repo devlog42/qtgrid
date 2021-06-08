@@ -14,6 +14,7 @@ elif importlib.util.find_spec("PySide6") is not None:
 else:
     raise Exception("Cannot find package PySide6, PyQt6, or PyQt5")
 
+
 def test_add(grid, some_label):
     # Preapre
     grid.set_list_names( ["test_list"] )
@@ -276,7 +277,6 @@ def test_add_gap(grid):
     assert grid.spans.has(5,2)
     assert grid.spans.has(6,1)
     assert grid.spans.has(6,2)
-
 
 def test_add_empty_row(grid):
     """

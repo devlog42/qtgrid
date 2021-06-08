@@ -25,9 +25,9 @@ def test_grid_defaults(grid):
     assert isinstance(grid.label_sources, dict)
     assert isinstance(grid.custom_lists, dict)
     assert grid.content_columns == 1
-    assert grid.expand_left     == False
-    assert grid.expand_right    == False
-    assert grid.work_up         == False
+    assert grid.expand_left  is False
+    assert grid.expand_right is False
+    assert grid.work_up      is False
     # Default labels has been set at init time with "_set_default_label_sources"
     assert True if "default"        in grid.label_sources else False
     assert True if "default-header" in grid.label_sources else False

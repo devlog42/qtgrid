@@ -17,6 +17,7 @@ else:
 # A singleton QApplication objects must be created.
 qapp = QApplication(sys.argv)
 
+
 @pytest.fixture
 def grid():
    return Grid()

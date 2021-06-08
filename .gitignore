@@ -2,6 +2,7 @@
 # ============
 *~
 .*~
+Pipfile
 Pipfile.lock
 # ghostwriter
 *.md.backup
