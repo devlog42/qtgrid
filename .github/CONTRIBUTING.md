@@ -91,7 +91,7 @@ Within the docstrings, reStructuredText is used. Here is a general example:
         """
 
 When it comes to rebuilding the entire homepage, the [mkdocs][9] module comes into play.
-The corresponding sites of the homepage can be found in *docs-pages/docs/* folder as good old markdown files.
+The corresponding sites of the homepage can be found in *docs-source/docs/* folder as good old markdown files.
 
 As long as you are working on it, you can start a small dev server :
 
