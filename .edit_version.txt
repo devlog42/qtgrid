@@ -1,0 +1,7 @@
+# For new versions edit the files:
+
+docs-source/mkapi.sh
+setup.py
+tests/test_gridhandle_00_version.py
+qtgrid/__init__.py
+
