@@ -123,4 +123,4 @@ When you write posts, it goes without saying that you use a friendly language. O
 
 ## License
 
-This package comes in terms of *GNU LGPLv3*.
+The [License][10] of this package comes in terms of *GNU LGPLv3*.

@@ -1,14 +1,15 @@
 # qtgrid
 
-[1]: https://www.riverbankcomputing.com/software/pyqt/ "PyQt"
-[2]: https://www.qt.io/qt-for-python                   "PySide6"
-[3]: https://devlog42.github.io/qtgrid/reference/      "Reference Manual"
-[4]: https://devlog42.github.io/qtgrid/tutorial/       "qtgrid Tutorial"
-[5]: https://github.com/devlog42/repo-skeleton/issues  "Issues Page"
-[6]: https://devlog42.github.io/qtgrid/api/            "API Documentation"
-[7]: https://github.com/devlog42/qtgrid/blob/main/.github/CONTRIBUTING.md    "Contributing"
-[8]: https://github.com/devlog42/qtgrid/blob/main/.github/CODE_OF_CONDUCT.md "Code of Conduct"
-[9]: https://devlog42.github.io/qtgrid                 "Documentation Homepage"
+[1]:  https://www.riverbankcomputing.com/software/pyqt/     "PyQt"
+[2]:  https://www.qt.io/qt-for-python                       "PySide6"
+[3]:  https://devlog42.github.io/qtgrid/reference/          "Reference Manual"
+[4]:  https://devlog42.github.io/qtgrid/tutorial/           "qtgrid Tutorial"
+[5]:  https://github.com/devlog42/repo-skeleton/issues      "Issues Page"
+[6]:  https://devlog42.github.io/qtgrid/api/                "API Documentation"
+[7]:  https://github.com/devlog42/qtgrid/blob/main/.github/CONTRIBUTING.md    "Contributing"
+[8]:  https://github.com/devlog42/qtgrid/blob/main/.github/CODE_OF_CONDUCT.md "Code of Conduct"
+[9]:  https://devlog42.github.io/qtgrid                     "Documentation Homepage"
+[10]: https://github.com/devlog42/qtgrid/blob/main/LICENSE  "License"
 
 The python **qtgrid** package is for [PyQt][1], or [PySide][2] developers. It helps to build *QGridLayout's* dynamically and with visual help during implementation time. Note that **qtgrid** works in the same way for PyQt6, PyQt5, and PySide6.
 
@@ -40,4 +41,4 @@ When you write posts, it goes without saying that you use a friendly language. O
 
 ## License
 
-This package comes in terms of *GNU LGPLv3*.
+The [License][10] of this package comes in terms of *GNU LGPLv3*.
