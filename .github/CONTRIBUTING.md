@@ -50,11 +50,23 @@ for packaging. So after cloning, here's what you should do:
     $ git clone https://github.com/devlog42/qtgrid
     $ cd qtgrid
     $ pipenv shell
-    $ pipenv install --dev pytest pydoctor PyQt5
+    $ pipenv install --dev pytest PyQt5 pydoctor[rst]
 
 In case you are also working on the [Documentation Homepage][8], ...
 
     $ pipenv install --dev mkdocs
+
+### Tip: Editable Install
+
+Similar with pip tools '-e' option, you can also install **qtgrid** for testing elsewhere on your system
+in editable mode.
+
+    $ mkdir testing_qtgrid
+    $ cd testing_qtgrid
+    $ pipenv shell
+    $ pipenv install -e /path/to/clone/of/qtgrid
+
+This creates a link to the sources and changes take effect immediately without having to reinstall **qtgrid**.
 
 ## Writing tests
 
@@ -65,10 +77,13 @@ The test scripts are as usual in the *tests/* folder. A certain order is guarant
 
 ## Documentation
 
-As for the documentation, there is the [Documentation Homepage][8] on GitHub and the API is a subset of that.
+As for the documentation, there is the [documentation homepage][8] on GitHub and the API is a subset of that.
 
 If it's only about the API, you don't have to worry about the homepage. You can regenerate the API if necessary
 by executing the *mkapi.sh* script in the *docs-source/* folder. The output is written to *docs/api/*.
+
+    $ cd docs-source
+    $ bash mkapi.sh
 
 Within the docstrings, reStructuredText is used. Here is a general example:
 

@@ -90,8 +90,11 @@ setup(
         "Development Status :: 4 - Beta",
         # Indicate who your project is intended for
         "Intended Audience :: Developers",
+        # Topic
         "Topic :: Software Development :: Build Tools",
-        # Pick your license as you wish
+        # OS
+        "Operating System :: OS Independent",
+        # Pick your license
         "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.

@@ -104,11 +104,12 @@ Use pip or pipenv
 - pip install qtgrid
 - pipenv install qtgrid
 
-Get the current project source from GitHub
+Get the current development source from GitHub
 
 - git clone https://github.com/devlog42/qtgrid
 
-When importing **qtgrid**, for an installation of PyQt6, PyQt5, or PySide6 is tested in that order. If none of these are found, a corresponding error message is issued.
+When importing **qtgrid**, for an installation of PyQt6, PyQt5, or PySide6 is tested in that order.
+If none of these are found, a corresponding error message is issued.
 
 ## Contribution
 
