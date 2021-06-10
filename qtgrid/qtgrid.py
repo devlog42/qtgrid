@@ -44,6 +44,8 @@ MAGENTA   = (180, 0,   180)
 HEADER_BG = (190, 190, 190)
 """RGB-tuple for headers default background color"""
 
+# Text for reminder
+REMIND_TO_FINISH = "Method 'finish' not used"
 
 class Grid(QObject):
     """
@@ -622,7 +624,7 @@ class Grid(QObject):
         self.spans._list = []
         # Add reminder label.
         # This will only be removed in finish method.
-        self.layout.addWidget( QLabel("Method 'finish' not used") )
+        self.layout.addWidget( QLabel( REMIND_TO_FINISH ) )
 
     def finish(self) -> None:
         """
@@ -634,8 +636,12 @@ class Grid(QObject):
 
         # Remove reminder label
         item = self.layout.takeAt(0)
-        lbl  = item.widget()
-        lbl.deleteLater()
+        if item is not None:
+            lbl = item.widget()
+            if ( lbl is not None \
+                and isinstance(lbl, QLabel) \
+                and lbl.text() == REMIND_TO_FINISH ):
+                lbl.deleteLater()
 
         max_y = self.cells.get_current_max_y()
 
