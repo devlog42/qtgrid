@@ -122,7 +122,7 @@ class Grid(QObject):
         self.cells   = _Cells(self)       # Cells
 
         # Clear layout
-        # This also adds the remainder label "Method 'finish' not used".
+        # This also adds the remainder label with text of global var: REMIND_TO_FINISH
         self.clear()
         # Prepare internal lists
         self.set_list_names( list_names )
@@ -141,6 +141,7 @@ class Grid(QObject):
         # ColumnGaps measure
         self.colgaps.measure()
 
+    ######################
     # Public set Accessors
     def set_list_names(self, names=[]) -> None:
         """
@@ -268,6 +269,7 @@ class Grid(QObject):
         # Set
         self.label_sources[ name_id ] = label
 
+    ######################
     # Public get Accessors
     def get_list(self, name=None) -> list:
         """
@@ -326,6 +328,7 @@ class Grid(QObject):
             raise Exception(f"Label with id '{name_id}' not found")
         return self.label_sources[ name_id ]
 
+    ################
     # Public methods
     def add(self, widget=None, y_span=1, x_span=1, to_list=None) -> object:
         """
@@ -607,13 +610,16 @@ class Grid(QObject):
         if _layout is None:
             _layout = self.layout
         # Clear grid items
-        while _layout.count():
-            item   = _layout.takeAt(0)
-            widget = item.widget()
-            if widget is not None:
-                widget.deleteLater()
-            else:
-                self.clear(item.layout())
+        item = _layout.takeAt(0)
+        while item is not None:
+            wgt = item.widget()
+            if wgt is not None:
+                wgt.deleteLater()
+            lyt = item.layout()
+            if lyt is not None:
+                self.clear( lyt )
+            item = _layout.takeAt(0)
+
         # Reset WriteHead coordinates
         self.wh.y = 0
         self.wh.x = 0
@@ -621,7 +627,9 @@ class Grid(QObject):
         for name in self.custom_lists:
             self.custom_lists[ name ] = []
         # Clear spans
-        self.spans._list = []
+        self.spans = _Spans(self)
+        # Clear cells
+        self.cells = _Cells(self)
         # Add reminder label.
         # This will only be removed in finish method.
         self.layout.addWidget( QLabel( REMIND_TO_FINISH ) )
@@ -635,12 +643,13 @@ class Grid(QObject):
         """
 
         # Remove reminder label
-        item = self.layout.takeAt(0)
+        item = self.layout.itemAt(0)
         if item is not None:
             lbl = item.widget()
-            if ( lbl is not None \
-                and isinstance(lbl, QLabel) \
-                and lbl.text() == REMIND_TO_FINISH ):
+            if ( lbl is not None
+                 and isinstance(lbl, QLabel)
+                 and lbl.text() == REMIND_TO_FINISH ):
+                self.layout.takeAt(0)
                 lbl.deleteLater()
 
         max_y = self.cells.get_current_max_y()
@@ -663,7 +672,7 @@ class Grid(QObject):
         # 2. Add column gaps
         self.colgaps.add_to_cells()
 
-        # 3. Apply cells
+        # 3. Apply user added cells
         self.cells.apply_to_layout()
 
         # 4. Mark unused cells
@@ -676,6 +685,7 @@ class Grid(QObject):
                         gap = _Gap( self, "H", "unused", index=idx)
                         self.layout.addWidget( gap.item, y, x )
 
+    #################
     # Private methods
     def _set_default_label_sources(self) -> None:
         """
@@ -998,6 +1008,7 @@ class _ColumnGaps():
             raise Exception("Number of 'columns_gaps' must be less than 'content_columns'")
         # Set
         self._list_orig = column_gaps
+        self.measure()
 
     def get(self) -> list:
         """
@@ -1242,7 +1253,7 @@ class _Cells():
 
         :return: int max y
         """
-        max_y = -1
+        max_y = 0
         for cell in self._list:
             if cell.y > max_y:
                 max_y = cell.y
