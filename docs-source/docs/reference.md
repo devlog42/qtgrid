@@ -1,9 +1,9 @@
 # The qtgrid Reference Manual
 
-[4]: https://devlog42.github.io/qtgrid/tutorial/  "qtgrid Tutorial"
-[6]: https://devlog42.github.io/qtgrid/api/       "API Documentation"
+[1]: https://devlog42.github.io/qtgrid/api/       "API Documentation"
+[2]: https://devlog42.github.io/qtgrid/tutorial/  "qtgrid Tutorial"
 
-Taken for granted, the primary source is the [API documentation][6]. The [qtgrid tutorial][4] gives an in deep explanation, and this reference manual is intended to give an overview for the everyday module usage.
+Taken for granted, the primary source is the [API documentation][1]. The [qtgrid tutorial][2] gives an in deep explanation, and this reference manual is intended to give an overview for the everyday module usage.
 
 ## Instantiation and Usage <a name="instatiation"></a>
 

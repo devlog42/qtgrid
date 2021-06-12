@@ -1,12 +1,10 @@
 # The qtgrid Tutorial
 
-[1]: https://www.riverbankcomputing.com/software/pyqt/ "PyQt"
-[3]: https://doc.qt.io/qt-5/qtdesigner-manual.html     "QtDesigner Manual"
-[4]: https://devlog42.github.io/qtgrid/reference/      "Reference Manual"
-[5]: https://doc.qt.io/qt-5/stylesheet-examples.html   "Qt Style Sheets"
-[6]: https://www.qt.io/qt-for-python                   "PySide"
+[1]: https://doc.qt.io/qt-5/qtdesigner-manual.html     "QtDesigner Manual"
+[2]: https://devlog42.github.io/qtgrid/reference/      "Reference Manual"
+[3]: https://doc.qt.io/qt-5/stylesheet-examples.html   "Qt Style Sheets"
 
-When it comes to setup a *QGridLayout* the [QtDesigner][3] is a good choice for static requirements. But if you want to fill it up with your own data, not to mention a dynamic building process from scratch, you may find yourself struggling with cell indices and strange layout results, wondering whats happen at the latest on a window resize. Moreover, it's hard to debug, since there is for example no possibility to draw a border around each cell, like in HTML tables.
+When it comes to setup a *QGridLayout* the [QtDesigner][1] is a good choice for static requirements. But if you want to fill it up with your own data, not to mention a dynamic building process from scratch, you may find yourself struggling with cell indices and strange layout results, wondering whats happen at the latest on a window resize. Moreover, it's hard to debug, since there is for example no possibility to draw a border around each cell, like in HTML tables.
 
 This is where **qtgrid** steps into the breach. Its main features are as follows:
 
@@ -108,7 +106,7 @@ Unsurprisingly, there is not much to see now. But we have our `grid_instance()` 
 
 ## Instantiate the Grid <a name="instantiate-grid"></a>
 
-Let's start rewriting both our `grid_instance()` and `grid_build()` methods. You may pass to the optional **layout** construction parameter a *QGridLayout* object, for example created with [QtDesigner][3]. Note that any items contained in it will be cleared out. In this example, we just instantiate *QGridLayout* without parameters.
+Let's start rewriting both our `grid_instance()` and `grid_build()` methods. You may pass to the optional **layout** construction parameter a *QGridLayout* object, for example created with [QtDesigner][1]. Note that any items contained in it will be cleared out. In this example, we just instantiate *QGridLayout* without parameters.
 
 ```python
     def grid_instance(self):
@@ -155,7 +153,7 @@ The **work\_up** option is your friend while you implement the grid layout and i
 
 Note that we configured the wrapped *QGridLayout* object, hold in the *grid.layout* property, right after instantiation.
 
-You may set any *Grid* options at construction time or with proper setter methods as described in the [qtgrid reference manual][4]. 
+You may set any *Grid* options at construction time or with proper setter methods as described in the [qtgrid reference manual][2].
 
 Beside adding a label widget, within the `grid_build()` method we were using two other important calls. The `clear()` method is not really necessary here, since the build process is triggered just once. But it's another matter in a dynamic setup, where the grid might be build after a pressed button. In that case you need to clear the grid, otherwise all widgets would be added repeatedly.
 
@@ -601,7 +599,7 @@ As of `add_gap()` and `add_empty_row()`, there are again three ways to define th
    ],
 ```
 
-By now, all colors which may be shown in *work up* mode are emerged. For a list of them and their meaning, consider the `set_work_up()` method in the [qtgrid reference manual][4].
+By now, all colors which may be shown in *work up* mode are emerged. For a list of them and their meaning, consider the `set_work_up()` method in the [qtgrid reference manual][2].
 
 ## Add Widgets Reissued <a name="add-widgets-reissued"></a>
 
@@ -988,7 +986,7 @@ As implementable this is, you might not want to grapple with label configuration
 
 `grid.add_label("default", "Some text")`
 
-> **Tip:** When it comes to design issues, you may want to use [Qt Style Sheets][5] which is mostly like CSS for HTML.
+> **Tip:** When it comes to design issues, you may want to use [Qt Style Sheets][3] which is mostly like CSS for HTML.
 
 ## Nested Grid's <a name="nested-grid"></a>
 
@@ -1061,7 +1059,7 @@ You can nest *Grid* objects by adding them to a cell as you would do for other w
     </font>
 </figure>
 
-At this juncture, this was it from my end. I hope the *Grid* package is a helpful tool for you. For your daily work you may take a look at the [qtgrid reference manual][4] and if you have hints for me related to this tutorial, don't hesitate to send me an email.
+At this juncture, this was it from my end. I hope the *Grid* package is a helpful tool for you. For your daily work you may take a look at the [qtgrid reference manual][2] and if you have hints for me related to this tutorial, don't hesitate to send me an email.
 
 Thanx, and happy coding  
 &nbsp;&nbsp;&nbsp;Detlef von der Hülst (devlog@gmx.de)
