@@ -11,7 +11,7 @@
 [9]:  https://devlog42.github.io/qtgrid                     "Documentation Homepage"
 [10]: https://github.com/devlog42/qtgrid/blob/main/LICENSE  "License"
 
-The python **qtgrid** package is for [PyQt][1], or [PySide][2] developers. It helps to build *QGridLayout's* dynamically and with visual help during implementation time. Note that **qtgrid** works in the same way for PyQt6, PyQt5, and PySide6.
+This python **qtgrid** package is for [PyQt][1], or [PySide][2] developers. It helps to build *QGridLayout's* dynamically and with visual help during implementation time. Note that **qtgrid** works in the same way for PyQt6, PyQt5, and PySide6.
 
 Please visit the [documentation homepage][9] to find an example usage, a [tutorial][4], a [reference manual][3], and for the brave the [API Documentation][5].
 
