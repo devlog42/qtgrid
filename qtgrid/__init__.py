@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+#
 # package qtgrid
 
 """
-The *qtgrid* package only contains the `qtgrid.qtgrid` module
+The *qtgrid* package only contains the `qtgrid.qtgrid` module.
 """
 
 from qtgrid.qtgrid import Grid
