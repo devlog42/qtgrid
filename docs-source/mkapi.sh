@@ -6,6 +6,6 @@ pydoctor --make-html \
          --html-output=../docs/api \
          --docformat=restructuredtext \
          --project-name="gtgrid" \
-         --project-version="1.0.0-beta.2" \
+         --project-version="1.0.0" \
          --project-url=https://devlog42.github.io/qtgrid/ \
          ../qtgrid/
